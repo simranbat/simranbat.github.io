@@ -1,0 +1,301 @@
+energy,liveness,tempo,speechiness,acousticness,instrumentalness,time_signature,danceability,key,duration_ms,loudness,valence,mode,type,uri,title,artist,album
+0.716,0.252,176.618,0.39,0.737,0.0,4,0.559,11,275227,-3.964,0.504,0,audio_features,spotify:track:0mkjekH9rwp4Fg5PxzUTrd,0 To 100 / The Catch Up,Drake,0 To 100 / The Catch Up
+0.619,0.31,152.105,0.231,0.0546,0.0,4,0.615,1,261267,-6.567,0.521,1,audio_features,spotify:track:0wjMiGwoS77eWwhsMfHAvy,4 My Town (Play Ball),Birdman,Pricele$$ (UK Deluxe Edition Explicit)
+0.623,0.125,105.45,0.106,0.0248,0.0,4,0.859,2,180667,-8.596,0.482,1,audio_features,spotify:track:0GQKP2WgHvBA8Nzb4xZu36,6 God,Drake,If You're Reading This It's Too Late
+0.535,0.114,78.974,0.449,0.217,0.0,4,0.812,4,167653,-9.306,0.321,1,audio_features,spotify:track:48S3Pfu533qMMgHXmV1ruh,6 Man,Drake,If You're Reading This It's Too Late
+0.849,0.155,128.428,0.25,0.107,0.0,3,0.554,5,283307,-4.154,0.386,1,audio_features,spotify:track:0KPUIYMqfLBvpRCwZ9hpFs,6PM In New York,Drake,If You're Reading This It's Too Late
+0.684,0.499,170.416,0.717,0.164,0.0,4,0.534,11,195720,-7.874,0.338,0,audio_features,spotify:track:5fcM0StdQxMjzulVGhFkHN,8 Out Of 10,Drake,Scorpion
+0.699,0.246,99.991,0.044,0.00113,0.000779,4,0.703,2,255787,-7.322,0.0393,1,audio_features,spotify:track:28XwBLUtFxOGoWzovwsdyJ,9,Drake,Views
+0.757,0.0762,172.938,0.384,0.262,1.72e-06,4,0.825,11,177733,-3.687,0.89,0,audio_features,spotify:track:0Qdbw4psZRGYANJauFqbdt,10 Bands,Drake,If You're Reading This It's Too Late
+0.621,0.124,89.282,0.394,0.653,0.0,4,0.747,4,253935,-9.115,0.306,0,audio_features,spotify:track:5pJnRLlzUcRxrtYgfdUwvg,30 for 30 Freestyle,Drake,What A Time To Be Alive
+0.521,0.179,108.025,0.28,0.0136,0.0,4,0.801,4,334360,-9.871,0.412,0,audio_features,spotify:track:46MFlm7p0Vqd0eXmLtDlN4,100 (feat. Drake),The Game,The Documentary 2
+0.599,0.105,137.022,0.141,0.226,0.0489,4,0.82,10,265038,-9.796,0.356,0,audio_features,spotify:track:1XWcdNQvGrX32fH09CwuWI,100it Racks,Future,Project E.T.
+0.487,0.204,99.438,0.281,0.0572,0.0,4,0.488,4,255827,-8.831,0.134,0,audio_features,spotify:track:5wTRsfZKeaQnQn8JeW8QYQ,305 To My City,Drake,Nothing Was The Same (Deluxe)
+0.229,0.113,111.887,0.0333,0.558,0.0413,4,0.61,11,186293,-12.36,0.19,0,audio_features,spotify:track:3oQV2LqDmYJu6zkULJT1uj,4422,Drake,More Life
+0.429,0.139,141.855,0.192,0.0386,0.0,4,0.65,2,289560,-13.071,0.333,1,audio_features,spotify:track:4IvenHmD0spfFDOKphoUDp,After Dark,Drake,Scorpion
+0.511,0.181,122.029,0.395,0.0689,0.0,4,0.669,1,271573,-6.943,0.429,1,audio_features,spotify:track:5ngydCLbzCEdtu8SEOXhPU,All Me,Drake,Nothing Was The Same (Deluxe)
+0.795,0.042,149.981,0.335,0.178,0.0,4,0.503,10,289707,-4.505,0.265,1,audio_features,spotify:track:6fcUfILqe3A1Wfixqy1VGy,Amen - feat. Drake,Meek Mill,Dreams and Nightmares
+0.58,0.0497,171.917,0.209,0.0125,0.0,4,0.57,10,270627,-5.547,0.405,0,audio_features,spotify:track:4kqluSwcQs3kqfK82ZrB93,Aston Martin Music,Rick Ross,Teflon Don
+0.673,0.136,148.019,0.315,0.329,0.0,4,0.833,1,149080,-6.981,0.753,0,audio_features,spotify:track:39liuGHPxn2sAyvO6DINor,Back On Road,Gucci Mane,Everybody Looking
+0.48,0.116,86.976,0.356,0.00854,0.0,4,0.893,1,170638,-3.728,0.382,0,audio_features,spotify:track:4rujbg8RNFitwtkv1qEq4K,Back To Back,Drake,Back To Back
+0.707,0.125,95.023,0.38,0.413,0.0,4,0.714,6,161613,-5.828,0.554,1,audio_features,spotify:track:3Ug5oZHXyhN3rpvNQJ1oV6,Bad Meaning Good,Slakah The Beatchild,"BBE20 - Attitude, Belief & Determination"
+0.884,0.503,81.144,0.401,0.229,0.0,4,0.504,10,202240,-7.311,0.932,0,audio_features,spotify:track:0GjbslizkTJiMEPPPdsCBD,Barry Bonds,Champagne Pa,Closer To My Dreams
+0.664,0.191,148.005,0.295,0.102,0.0,4,0.733,8,288133,-6.163,0.557,1,audio_features,spotify:track:1iiEQ7XN33cFEwAJm7w1Yv,BedRock,Young Money,We Are Young Money
+0.482,0.111,92.023,0.181,0.281,0.0,4,0.842,10,337640,-8.846,0.205,0,audio_features,spotify:track:0MirjRAnvfJr3pumGsTwMi,Believe Me,Lil Wayne,Believe Me
+0.894,0.188,162.193,0.33,0.0951,0.0,4,0.431,5,258760,-2.673,0.604,0,audio_features,spotify:track:1GxHeBvQ9935Dd3cSfsfBa,Best I Ever Had,Drake,Thank Me Later (Int'l Version)
+0.815,0.107,133.914,0.297,0.0251,0.0,4,0.528,3,191493,-4.878,0.0937,0,audio_features,spotify:track:7n0d4jnQWd3CCxUBZM8ci0,Big Amount,2 Chainz,Big Amount
+0.676,0.251,131.938,0.277,0.00179,0.0,4,0.769,8,217707,-6.48,0.304,0,audio_features,spotify:track:31ZaSoek4y74F6HPhXylr8,Big Rings,Drake,What A Time To Be Alive
+0.515,0.446,141.009,0.271,0.247,0.0,4,0.888,1,225893,-6.246,0.264,1,audio_features,spotify:track:5S1IUPueD0xE0vj4zU3nSf,Bigger Than You (feat. Drake & Quavo),2 Chainz,Bigger Than You feat. Drake & Quavo
+0.535,0.0984,98.067,0.0476,0.0533,1.38e-05,4,0.726,7,216558,-7.804,0.375,0,audio_features,spotify:track:3NzJnmcgNPGFWJYvO3HneW,Blem,Drake,More Life
+0.621,0.136,118.891,0.283,0.315,0.0,4,0.789,10,252040,-7.685,0.158,0,audio_features,spotify:track:1bzM1cd6oqFozdr4wK6HdR,Blessings,Big Sean,Dark Sky Paradise
+0.377,0.19,133.996,0.339,0.0126,0.0,4,0.888,7,162800,-10.142,0.126,0,audio_features,spotify:track:1Jrj3k5L36dPkU6KAclU7g,Blue Tint,Drake,Scorpion
+0.493,0.0666,140.007,0.128,0.0606,7.95e-05,4,0.834,5,252017,-6.567,0.28,0,audio_features,spotify:track:53HIIqV64NIKyyGllfKvzu,Both (feat. Drake & Lil Wayne) - Remix,Gucci Mane,Both (feat. Drake & Lil Wayne) [Remix]
+0.405,0.0707,139.976,0.225,0.119,0.000118,4,0.85,7,190312,-7.509,0.344,0,audio_features,spotify:track:5tFep7dXGd7vEJ668wTPux,Both (feat. Drake),Gucci Mane,The Return of East Atlanta Santa
+0.266,0.169,59.122,0.0945,0.596,0.0,4,0.491,6,215144,-15.626,0.368,1,audio_features,spotify:track:0ER8q7eFoMvabfw1S1oT7s,Brand New,Champagne Pa,Closer To My Dreams
+0.318,0.111,151.968,0.403,0.234,5.08e-06,4,0.878,6,254779,-5.81,0.214,0,audio_features,spotify:track:6rNVR6kOZwn6Q3EW6tvkgi,Bring It Back (with Drake & Mike WiLL Made-It),Trouble,Bring It Back (with Drake & Mike WiLL Made-It)
+0.543,0.505,102.01,0.112,0.412,0.0,4,0.711,0,150960,-12.692,0.801,1,audio_features,spotify:track:1ZyudLFv35SRvY5SvTZqJx,Buried Alive Interlude,Drake,Take Care (Deluxe)
+0.735,0.239,120.154,0.0881,0.106,4.59e-06,4,0.692,8,272747,-5.132,0.333,1,audio_features,spotify:track:4FcvYEVtmB0UuIPbdzwqsH,Cabaret,Justin Timberlake,The 20/20 Experience - 2 of 2 (Deluxe)
+0.638,0.11,160.158,0.896,0.828,0.000201,4,0.479,11,244645,-12.112,0.19,0,audio_features,spotify:track:1tcLxH1WhA2oORQKDUFsS4,The Calm,Drake,So Far Gone
+0.403,0.13,139.92,0.147,0.255,1.27e-05,4,0.441,2,434960,-11.18,0.158,0,audio_features,spotify:track:2FbGlEPAjNhWvrVvlentVq,Cameras / Good Ones Go Interlude - Medley,Drake,Take Care (Deluxe)
+0.432,0.0571,86.956,0.143,0.041,0.0,4,0.878,10,163973,-9.852,0.441,0,audio_features,spotify:track:7cfvP13Bqb1EyCZQiYsLum,Can’t Take A Joke,Drake,Scorpion
+0.572,0.121,82.445,0.373,0.0136,1.55e-06,4,0.856,1,228438,-8.429,0.454,1,audio_features,spotify:track:7ol8W3NEydMmc0cEvD96Ts,Can't Have Everything,Drake,More Life
+0.603,0.115,94.992,0.0331,0.0538,5.83e-06,4,0.436,9,154120,-6.882,0.227,0,audio_features,spotify:track:147TR5QZzxTnnwqltaRi4N,Cece's Interlude,Drake,Thank Me Later (Int'l Version)
+0.675,0.229,73.024,0.146,0.345,0.0,4,0.691,3,252960,-5.612,0.925,0,audio_features,spotify:track:1RKSWMAwBTuwhYkZlYskqw,Celebration (feat. Drake),Tank,Now Or Never
+0.697,0.469,164.126,0.039,0.00653,0.0,4,0.453,1,296040,-4.759,0.0486,1,audio_features,spotify:track:4HGoHFPqYbUOVx9KPSRNMk,Champion,Nicki Minaj,Pink Friday ... Roman Reloaded
+0.334,0.118,137.855,0.385,0.0204,0.0,4,0.804,0,220862,-10.135,0.202,1,audio_features,spotify:track:35Nsvr22p4RsudZoH8kLdC,Change Locations,Drake,What A Time To Be Alive
+0.698,0.0719,132.981,0.35,0.0924,0.0,5,0.482,6,211853,-6.701,0.899,0,audio_features,spotify:track:1Zjn2BMaHsXG43bTGuTZf0,Change You,Jenna,The Radio Singles
+0.694,0.121,177.777,0.608,0.91,0.0,4,0.457,6,189769,-7.018,0.383,0,audio_features,spotify:track:3bOoByGO6dgf3EYY8pSDaV,Charged Up,Drake,Charged Up
+0.482,0.197,160.027,0.231,0.0173,7.1e-06,4,0.691,1,241400,-11.14,0.305,1,audio_features,spotify:track:2YuurylylBcB0fJ8ho5soN,Childs Play,Drake,Views
+0.715,0.106,92.933,0.261,0.142,0.0,4,0.733,1,311536,-5.614,0.869,1,audio_features,spotify:track:3hDm6Z9TeSVRVpvi468hJR,Closer,Champagne Pa,Even Closer To My Dreams
+0.616,0.141,86.219,0.0804,0.679,2.43e-05,4,0.409,6,239882,-9.584,0.655,0,audio_features,spotify:track:2K6CmoAlg0lUMnfIWyONEs,Club Paradise,Empire,Power 16
+0.347,0.087,84.987,0.0636,0.0511,2.43e-06,4,0.717,11,235477,-10.265,0.0589,0,audio_features,spotify:track:1wZqJM5FGDEl3FjHDxDyQd,Come and See Me (feat. Drake),PARTYNEXTDOOR,PARTYNEXTDOOR 3 (P3)
+0.457,0.109,99.99,0.204,0.138,1.96e-06,4,0.835,4,211274,-7.455,0.544,0,audio_features,spotify:track:2f9LSU0aBW04w6KL26DW8r,Come Closer,WizKid,Come Closer
+0.477,0.58,82.046,0.183,0.168,0.0,4,0.632,0,236360,-5.802,0.433,0,audio_features,spotify:track:5Ggfa9cpkpfp5D6Rg0Yyw1,Come Thru,Drake,Nothing Was The Same (Deluxe)
+0.55,0.165,107.571,0.0496,0.0403,0.0,4,0.651,7,252640,-8.216,0.119,1,audio_features,spotify:track:4whiojdZ6EVhfky6InPF8r,Company,Drake,If You're Reading This It's Too Late
+0.492,0.145,75.067,0.157,0.414,0.0,4,0.675,6,296400,-9.516,0.472,0,audio_features,spotify:track:1Sj81sMg37Hd4omn7Ow2qR,Connect,Drake,Nothing Was The Same (Deluxe)
+0.476,0.113,122.976,0.249,0.0773,0.0,5,0.607,10,245227,-11.076,0.347,0,audio_features,spotify:track:6F609ICg9Spjrw1epsAnpa,Controlla,Drake,Views
+0.546,0.229,160.152,0.238,0.227,0.0,4,0.418,0,208813,-9.057,0.294,0,audio_features,spotify:track:0V4l4GQhgnWQGtCWpvA7va,Crew Love,Drake,Take Care (Deluxe)
+0.649,0.0886,147.941,0.239,0.317,0.0,4,0.72,5,338920,-5.187,0.243,0,audio_features,spotify:track:4QKMuKPhCK8Aji8MaeJL4T,"Deuces Remix - f/Drake, Kanye West & André 3000 - Explicit Version",Chris Brown,Deuces Remix
+0.362,0.111,135.797,0.048,0.139,2.83e-05,4,0.522,1,314632,-10.827,0.17,1,audio_features,spotify:track:1sJU5QlgpMaORYwMi1DR9o,Diamonds Dancing,Drake,What A Time To Be Alive
+0.734,0.196,110.771,0.239,0.352,0.0,5,0.511,6,276160,-6.025,0.377,0,audio_features,spotify:track:2aiHJxrgb7PvbTvq4s1FEz,Diced Pineapples,Rick Ross,"God Forgives, I Don't (Deluxe Edition)"
+0.543,0.234,140.029,0.128,0.00311,6.85e-06,4,0.889,2,231231,-7.666,0.314,1,audio_features,spotify:track:3iZ8223bfKeY87iTdcRMtJ,Digital Dash,Drake,What A Time To Be Alive
+0.674,0.0906,213.737,0.358,0.018,0.0,4,0.533,1,278787,-5.862,0.602,1,audio_features,spotify:track:2tYzBN5rGuA6qVwxDKk1Ip,Digital Girl Remix - Original Remix,Jamie Foxx,Digital Girl Remix (Original Remix)
+0.846,0.292,75.137,0.453,0.00472,0.0,4,0.663,0,255840,-5.226,0.526,1,audio_features,spotify:track:3tvkzvUTF0yoq3pdBi81I0,Diplomatic Immunity,Drake,Scary Hours
+0.607,0.29,76.987,0.277,0.0958,0.0,4,0.721,0,206267,-7.078,0.59,0,audio_features,spotify:track:6AaOtHsKd195ec0Y4kC9ER,DnF,Preme,DnF
+0.693,0.112,170.982,0.45,0.246,0.0,4,0.618,7,283551,-5.943,0.454,0,audio_features,spotify:track:1JxV2A7IFlmosxlCckJ8Yc,Do Not Disturb,Drake,More Life
+0.172,0.108,101.275,0.0445,0.841,6.78e-05,4,0.397,6,265120,-15.698,0.123,0,audio_features,spotify:track:4eSGSqP2TZvvX0kadZZttM,Doing It Wrong,Drake,Take Care (Deluxe)
+0.317,0.11,103.001,0.0583,0.497,0.0128,4,0.825,10,245787,-12.39,0.136,1,audio_features,spotify:track:36ONiya0OANYknz0GgJmwB,Don’t Matter To Me,Drake,Scorpion
+0.362,0.109,122.043,0.055,0.157,0.0,4,0.709,11,251860,-9.814,0.113,1,audio_features,spotify:track:0PXp9QxBfSKGGpWUNaws2X,Drama (feat. Drake),Roy Woods,Exis
+0.47,0.118,76.056,0.139,0.0153,0.0,4,0.755,1,184960,-8.72,0.0604,1,audio_features,spotify:track:4uloft7ZE54WflsuqFmjC7,Elevate,Drake,Scorpion
+0.676,0.0811,173.478,0.213,0.0239,0.0,4,0.413,1,302173,-5.124,0.0827,1,audio_features,spotify:track:1v1IXPXl73Z7zy6f5tUa9n,Emotionless,Drake,Scorpion
+0.571,0.534,172.105,0.478,0.38,0.0,4,0.748,11,181933,-7.916,0.553,1,audio_features,spotify:track:39h7qYbmksGgxQzDH9X7Aq,Energy,Drake,If You're Reading This It's Too Late
+0.637,0.0791,97.967,0.0926,0.203,2.74e-05,4,0.844,1,227000,-3.136,0.812,0,audio_features,spotify:track:3JgImOzJU8ByzRWcxaLzMF,Enjoy Ya Self V2,Slakah The Beatchild,Soul Movement Vol I
+0.495,0.079,128.227,0.0889,0.572,0.0,5,0.47,8,236880,-8.34,0.443,1,audio_features,spotify:track:4UBVhw7F2XdieAtMntW4MU,Enough Said,Aubrey,Drank
+0.744,0.319,76.171,0.252,0.00291,0.0,4,0.605,4,313400,-5.5,0.743,1,audio_features,spotify:track:2Vf9DiamkE8MHbjj1BXoKG,EveryGirl In The World,Young Money,We Are Young Money
+0.684,0.314,79.994,0.251,0.0771,0.0,4,0.654,4,187067,-7.953,0.665,0,audio_features,spotify:track:3P1oszEYywRpMvlcSKuT84,F*** Da Bulls***,Young Money,We Are Young Money
+0.687,0.114,96.006,0.263,0.0208,1e-06,4,0.869,1,233787,-6.816,0.668,1,audio_features,spotify:track:4XoP1AkbOurU9CeZ2rMEz2,F**kin' Problems,A$AP Rocky,LONG.LIVE.A$AP (Deluxe Version)
+0.54,0.206,112.754,0.103,0.336,0.0,3,0.805,11,186027,-9.299,0.412,0,audio_features,spotify:track:7d485yHrFG6NxY9Zx08oyq,"Faith, Pt. 2",Kos,Muchmusic Presents: K-Os Live
+0.446,0.323,99.979,0.162,0.104,1.01e-05,4,0.536,1,290133,-10.489,0.157,1,audio_features,spotify:track:5csyFWmmFlqKXh3ehjom3H,Faithful,Drake,Views
+0.481,0.176,134.007,0.287,0.105,0.0,4,0.928,9,210937,-9.35,0.613,0,audio_features,spotify:track:5o2r7507gCOYdRMeR3noqZ,Fake Love,Drake,More Life
+0.393,0.11,136.866,0.0827,0.394,3.24e-06,4,0.593,1,269533,-11.736,0.193,1,audio_features,spotify:track:0hRPRbA2B1CYmGNhWhFjwF,Fall For Your Type,Jamie Foxx,Best Night Of My Life
+0.884,0.356,87.275,0.458,0.331,2e-06,4,0.517,2,319387,-5.581,0.282,0,audio_features,spotify:track:238Sekyg7DyN2XDm0z4oWY,Fancy,Drake,Thank Me Later (Int'l Version)
+0.783,0.11,83.944,0.181,0.0615,0.0,4,0.334,9,280404,-6.144,0.308,0,audio_features,spotify:track:6WoU9Joc473Jrc7NNrpGIZ,Fear,Drake,So Far Gone
+0.673,0.116,193.668,0.162,0.032,6.38e-06,4,0.581,7,240653,-7.111,0.209,1,audio_features,spotify:track:6H7b2XG2xcpctrl602BwGl,Feel No Ways,Drake,Views
+0.449,0.115,86.505,0.442,0.428,8.29e-06,4,0.461,0,219960,-10.998,0.104,1,audio_features,spotify:track:7ijJ5crvsnCvCLJbHpyq3j,Final Fantasy,Drake,Scorpion
+0.613,0.0286,96.034,0.173,0.0209,0.0,4,0.625,6,208947,-6.005,0.737,0,audio_features,spotify:track:18PSaTJMLkFNWnW0NWdOAW,Find Your Love,Drake,Thank Me Later (Int'l Version)
+0.321,0.1,94.994,0.0571,0.132,0.000289,4,0.807,0,182080,-8.147,0.305,0,audio_features,spotify:track:590bUp2TKTfTS9NfiD4Nmn,Finesse,Drake,Scorpion
+0.259,0.0855,79.839,0.0892,0.0803,0.0,4,0.709,1,238120,-14.341,0.265,0,audio_features,spotify:track:2ZB8Zwf6wd3PUMlSJKR2bG,Fire & Desire,Drake,Views
+0.756,0.162,89.453,0.356,0.434,0.0,4,0.52,0,313267,-6.472,0.533,1,audio_features,spotify:track:4pUUhsc8fmZqnsPaOSU5CP,Fireworks,Drake,Thank Me Later (Int'l Version)
+0.571,0.153,103.521,0.2,0.0173,1.11e-06,4,0.916,10,183695,-8.241,0.498,0,audio_features,spotify:track:0lDBERpbbSfh3og8dSszfj,For Free,DJ Khaled,For Free
+0.925,0.174,104.855,0.35,0.248,0.0,5,0.459,5,357920,-1.327,0.533,0,audio_features,spotify:track:0Bpkq4z0VfjkO7kUME8gks,Forever,Drake,Forever
+0.491,0.571,141.979,0.439,0.0681,0.0,4,0.736,10,218674,-6.892,0.203,0,audio_features,spotify:track:3LBBQH0CWnrG3kSvSmzArK,Free Smoke,Drake,More Life
+0.623,0.462,98.918,0.365,0.281,0.0,5,0.57,1,231210,-7.852,0.28,1,audio_features,spotify:track:7KYvXOlM9mDAfUGZ322WZo,Free Spirit,Empire,Power 16
+0.509,0.127,91.632,0.475,0.633,0.0,4,0.564,1,322160,-9.727,0.388,0,audio_features,spotify:track:2WC4sK0ryyysQhtDok9Ytr,From Time,Drake,Nothing Was The Same (Deluxe)
+0.772,0.0574,137.083,0.148,0.148,0.0,4,0.549,9,267373,-5.292,0.249,0,audio_features,spotify:track:6s64FyS9n0XYbGMLH3LOWU,Furthest Thing,Drake,Nothing Was The Same (Deluxe)
+0.721,0.104,123.011,0.0514,0.0945,0.391,4,0.781,5,250337,-9.133,0.849,0,audio_features,spotify:track:5WHVJ7MILL1r5xs8hDfJ4i,Get It Together,Drake,More Life
+0.376,0.101,126.913,0.408,0.743,0.0,4,0.632,11,225776,-14.209,0.537,0,audio_features,spotify:track:2zotpumS699VgoHFJuUdeY,Girls Love Beyonce,Champagne Pa,Even Closer To My Dreams
+0.384,0.708,162.097,0.375,0.2,0.0,4,0.688,9,206120,-8.824,0.432,0,audio_features,spotify:track:1kLsyb2tgz9N5Qkr6QAK3t,Glow,Drake,More Life
+0.449,0.55,77.167,0.108,0.0329,7.84e-05,4,0.754,7,198973,-9.212,0.35,1,audio_features,spotify:track:2VWbHHhWnMzKWPUs4IEEW9,God's Plan,Drake,Scorpion
+0.642,0.389,83.246,0.321,0.131,0.0,4,0.528,1,149577,-8.156,0.725,1,audio_features,spotify:track:4md7eAD6z2V4HJmQ3n4ZAI,Going In For Life,Champagne Pa,Closer To My Dreams
+0.745,0.0823,148.042,0.25,0.0311,0.0,4,0.715,9,262440,-5.71,0.687,1,audio_features,spotify:track:5r25QBiGwvvKCmMGO4LmHI,Gonorrhea,Lil Wayne,I Am Not A Human Being
+0.84,0.87,159.939,0.311,0.0291,0.0,4,0.38,1,278067,-4.528,0.387,0,audio_features,spotify:track:4tE0wFfKP06mkDjTNM5BlN,Good Girls Go Bad,The Game,The R.E.D. Album
+0.44,0.0798,145.116,0.471,0.00175,2.73e-06,4,0.711,1,220427,-9.509,0.121,1,audio_features,spotify:track:5iemvGR1EraL9s3XvohIP3,Grammys,Drake,Views
+0.521,0.564,103.985,0.204,0.0118,0.0,4,0.797,1,306173,-8.21,0.391,1,audio_features,spotify:track:1dDFQi1sE3TgPJrLIsMDGl,Grindin',Lil Wayne,Grindin'
+0.391,0.0945,131.018,0.063,0.0317,0.000502,4,0.877,1,189230,-8.196,0.122,1,audio_features,spotify:track:2ExePm1EBdSJkr4Y4Nc50z,Gyalchester,Drake,More Life
+0.566,0.0917,151.894,0.106,0.365,0.000353,4,0.636,6,235987,-7.16,0.425,0,audio_features,spotify:track:6LxSe8YmdPxy095Ux6znaQ,Headlines,Drake,Take Care (Deluxe)
+0.404,0.0718,99.999,0.0949,0.00357,2.17e-05,4,0.773,6,227880,-7.438,0.287,0,audio_features,spotify:track:6jdOi5U5LBzQrc4c1VT983,"Hold On, We're Going Home",Drake,Nothing Was The Same (Deluxe)
+0.62,0.0504,134.96,0.0587,0.00347,0.000119,4,0.903,2,267067,-8.094,0.539,1,audio_features,spotify:track:2FBUoWkIuQXwayw2RNo5l6,Hotline Bling,Drake,Views
+0.576,0.205,135.312,0.0519,0.319,0.00509,4,0.699,1,289042,-9.304,0.425,0,audio_features,spotify:track:70DxNukoeuWgo2yssD0e0N,Houstatlantavegas,Drake,So Far Gone
+0.627,0.0795,98.21,0.252,0.123,0.0,3,0.444,7,206627,-8.744,0.359,0,audio_features,spotify:track:0m1KYWlT6LhFRBDVq9UNx4,HYFR (Hell Ya Fucking Right),Drake,Take Care (Deluxe)
+0.633,0.368,129.97,0.169,0.0259,0.0,4,0.785,7,209413,-8.223,0.244,1,audio_features,spotify:track:7JnEdTyLhvRAZUg8z53Gx3,Hype,Drake,Views
+0.701,0.193,145.346,0.188,0.183,0.0,4,0.603,11,373693,-4.495,0.603,0,audio_features,spotify:track:0OLgjNaWAxCMjOlglLQ0Dp,I Do It,2 Chainz,B.O.A.T.S. II #METIME
+0.456,0.101,81.579,0.0633,0.685,2.5e-05,4,0.424,11,253597,-12.316,0.593,0,audio_features,spotify:track:7CcZxHebD3G7NHX20pV4Np,I Get Lonely Too,Champagne Pa,Even Closer To My Dreams
+0.76,0.184,89.958,0.0587,0.0678,0.0,4,0.69,0,247933,-4.778,0.468,1,audio_features,spotify:track:3q2NeHhnBXrsphLcY4Exxj,I Invented Sex [feat. Drake],Trey Songz,Ready
+0.763,0.103,170.031,0.377,0.0389,0.0,4,0.662,1,223701,-8.455,0.566,1,audio_features,spotify:track:04T3yZYt92tBvgqxTdeJxd,I'm Goin In,Drake,So Far Gone
+0.802,0.606,150.013,0.296,0.0606,0.0,4,0.519,11,296147,-3.449,0.414,0,audio_features,spotify:track:0IekdWvcDKkcnUyJt0NWga,I'm On One,DJ Khaled,We The Best Forever
+0.579,0.299,104.267,0.158,0.00097,0.0,5,0.495,9,221753,-7.474,0.22,1,audio_features,spotify:track:0EoJvT28HPgpkGdIAdBQGH,I'm Still Fly feat. Drake - Dirty,Page,I'm Still Fly (feat. Drake)
+0.519,0.131,160.003,0.223,0.000394,0.00069,4,0.842,0,180000,-9.255,0.249,1,audio_features,spotify:track:3nR43A2UqJAkYzbYfIHRGa,I'm The Plug,Drake,What A Time To Be Alive
+0.587,0.0835,149.993,0.338,0.279,0.0,4,0.899,11,214467,-7.866,0.49,0,audio_features,spotify:track:1iSZPndzmY6NvL1jAtIvY1,I'm Upset,Drake,Scorpion
+0.551,0.386,124.957,0.353,0.08,0.0,4,0.813,6,250770,-7.605,0.598,0,audio_features,spotify:track:7IVQ3HgoP3SRoJqxym4nBD,Ice Melts,Drake,More Life
+0.714,0.408,140.001,0.243,0.39,0.0,4,0.735,9,185156,-5.798,0.879,0,audio_features,spotify:track:369B02oQm5ljWvVvDwTiv1,In My Business (Feat. Drake & Sean Garrett),Gucci Mane,Guccimerica
+0.482,0.448,181.995,0.139,0.00623,0.0144,4,0.735,8,217933,-9.445,0.315,1,audio_features,spotify:track:0bAkKNCQfWkexHFn7fIKns,In My Feelings,Drake,Scorpion
+0.671,0.212,83.078,0.477,0.764,0.0,4,0.44,3,234387,-10.598,0.479,0,audio_features,spotify:track:6FedhFiHb0KxTvOD1qEX8L,In the Morning,J. Cole,Cole World: The Sideline Story
+0.538,0.149,83.508,0.312,0.738,0.0,4,0.636,1,226920,-7.725,0.514,1,audio_features,spotify:track:2QoOyCFpDo4NblMLP7vBRT,Is There More,Drake,Scorpion
+0.759,0.356,153.923,0.173,0.0687,0.0,4,0.569,6,345987,-6.412,0.154,0,audio_features,spotify:track:6yW1eCHbR58c3ptwrCrW3v,It's Been a Pleasure,Bun B,Trill O.G.
+0.715,0.119,85.356,0.156,0.0244,0.0,5,0.666,8,241467,-7.292,0.1,1,audio_features,spotify:track:2VY1GTTsPl2Ho91Zhu1VKY,It's Good,Lil Wayne,Tha Carter IV (Deluxe)
+0.272,0.175,116.036,0.041,0.0366,0.0,4,0.766,0,262453,-5.696,0.037,1,audio_features,spotify:track:3jipFRgLyKK0oJoG1pKicx,Jaded,Drake,Scorpion
+0.528,0.0936,146.056,0.274,0.511,0.000334,4,0.757,0,188703,-10.799,0.302,0,audio_features,spotify:track:5a5BZe4XVd1bvWXLOLPUfV,Jersey,Future,What A Time To Be Alive
+0.861,0.0898,92.022,0.248,0.00591,0.0,4,0.498,2,274364,-2.495,0.23,1,audio_features,spotify:track:0rblsRyJ8ziZprfH9daK5P,Jodeci Freestyle,Champagne Pa,Even Closer To My Dreams
+0.373,0.288,123.081,0.104,0.762,0.00202,4,0.735,11,107673,-10.478,0.237,1,audio_features,spotify:track:0kzMtLeKUU7tmAUq2xh7WC,Jorja Interlude,Drake,More Life
+0.693,0.0826,94.06,0.0332,0.0333,0.000406,4,0.782,5,147174,-5.748,0.719,1,audio_features,spotify:track:4Ykrbnzkhzw3p9S8H1Ir7F,Juice,Champagne Pa,Closer To My Dreams
+0.545,0.0859,77.125,0.482,0.31,0.0,4,0.748,1,127817,-12.276,0.851,1,audio_features,spotify:track:1nottDE1NL5MSSWrlx5Xs7,July,Champagne Pa,Closer To My Dreams
+0.558,0.341,142.079,0.202,0.0462,0.0,4,0.853,1,205879,-7.448,0.654,1,audio_features,spotify:track:46gjYTEK7W8ZTABcglGP2f,Jumpman,Drake,What A Time To Be Alive
+0.235,0.107,99.906,0.0541,0.618,0.000144,4,0.69,7,320400,-8.651,0.378,1,audio_features,spotify:track:7cTrekacPXjNTQuEJGN4Ee,Jungle,Drake,If You're Reading This It's Too Late
+0.658,0.0805,151.026,0.11,0.00901,0.0189,4,0.756,0,227973,-7.124,0.954,1,audio_features,spotify:track:3bnVNMCk5FJulcpS7aXJbY,Karaoke,Drake,Thank Me Later (Int'l Version)
+0.56,0.381,98.858,0.0448,0.132,0.0,3,0.373,9,328907,-7.615,0.187,0,audio_features,spotify:track:4oew1mJmqFITgwGG7QZl37,Keep The Family Close,Drake,Views
+0.704,0.0821,76.409,0.297,0.0499,0.0,4,0.573,8,199173,-7.45,0.371,0,audio_features,spotify:track:6TCWK0swzjyTDVd5DkMdEK,Killer (feat. Drake),Nipsey Hussle,Bullets Ain't Got No Name Vol. 3.1
+0.6,0.132,119.987,0.0435,0.0189,0.0143,4,0.875,1,162638,-6.818,0.0906,1,audio_features,spotify:track:21kVlWTlFf8dO8N2aTzlof,KMT,Drake,More Life
+0.412,0.342,114.413,0.225,0.196,0.0,4,0.733,11,275840,-8.687,0.179,0,audio_features,spotify:track:2WzpOMkCaakq1T3luPCjLH,Know Yourself,Drake,If You're Reading This It's Too Late
+0.658,0.0816,120.108,0.319,0.0101,0.0,4,0.819,7,224040,-8.417,0.54,1,audio_features,spotify:track:5dHpbFmZjWucrol0M7aNGU,The Language,Drake,Nothing Was The Same (Deluxe)
+0.563,0.0776,100.093,0.071,0.0269,0.0,4,0.712,1,241853,-7.573,0.299,1,audio_features,spotify:track:4aIZQ7kJLS1TgFw2pEj0RD,Legend,Drake,If You're Reading This It's Too Late
+0.657,0.0932,189.992,0.237,0.000738,3.34e-06,4,0.777,1,226107,-6.434,0.245,1,audio_features,spotify:track:739vCwA3EpBSkk3uDsI2wB,Lemon - Drake Remix,N.E.R.D,Lemon (Drake Remix)
+0.907,0.151,86.152,0.415,0.0946,0.0,4,0.484,8,274147,-5.996,0.206,1,audio_features,spotify:track:23Cx5Jv0bsCMoUnoygy5jy,Light Up,Drake,Thank Me Later (Int'l Version)
+0.813,0.362,141.757,0.15,0.023,0.0,4,0.467,1,355004,-5.026,0.478,1,audio_features,spotify:track:4miAiHC7oVoCaPE5cPTudx,The Lights,Champagne Pa,Even Closer To My Dreams
+0.674,0.115,75.993,0.147,0.531,0.0,4,0.62,0,222667,-7.617,0.204,1,audio_features,spotify:track:4ER9305DBAmJqj2P96TfBr,Live For,The Weeknd,Kiss Land (Deluxe)
+0.485,0.0805,82.992,0.24,0.0335,0.0,4,0.885,4,211643,-8.491,0.293,0,audio_features,spotify:track:6SENBySbsV1rMUImLhqRZu,Live From The Gutter,Drake,What A Time To Be Alive
+0.581,0.105,140.022,0.27,0.00104,5.86e-05,4,0.922,10,181263,-7.495,0.595,1,audio_features,spotify:track:4qKcDkK6siZ7Jp1Jb4m0aL,Look Alive (feat. Drake),BlocBoy JB,Look Alive (feat. Drake)
+0.351,0.0967,134.369,0.34,0.485,0.0,4,0.495,3,301960,-14.669,0.271,0,audio_features,spotify:track:7t1lBIr3WIEtqQEOdZFMUf,Look What You've Done,Drake,Take Care (Deluxe)
+0.887,0.834,167.579,0.367,0.0786,0.0,4,0.417,5,307640,-5.551,0.303,0,audio_features,spotify:track:1QBwk6GTCxVdC2hoSw9tlM,Lord Knows,Drake,Take Care (Deluxe)
+0.583,0.372,89.835,0.376,0.699,0.0,4,0.526,4,305374,-9.172,0.378,1,audio_features,spotify:track:465I5rJp4tgLMSwqkqmZOF,Lose You,Drake,More Life
+0.632,0.108,124.931,0.033,0.0133,0.0,4,0.672,8,255280,-6.426,0.501,0,audio_features,spotify:track:07EN1w6em5L8Lt3H5ARcSO,Love Me,Lil Wayne,Love Me
+0.682,0.175,189.948,0.037,0.0288,0.0,4,0.427,8,244920,-2.268,0.455,0,audio_features,spotify:track:3OvMaOliEB2Q79RC6MDpYl,Loving You No More,Diddy - Dirty Money,Last Train To Paris [Deluxe (Explicit Version)]
+0.618,0.343,138.014,0.247,0.00456,0.0,4,0.755,7,305800,-6.575,0.159,1,audio_features,spotify:track:6KP7BkNhSpVM2OcVYxuT8V,Made Men,DJ Rell,DJ Rell Presents: Dope Boy Flows
+0.521,0.607,105.992,0.166,0.245,0.00545,4,0.839,7,205163,-10.45,0.33,1,audio_features,spotify:track:0ZaSipkjXePTkzOQW29rxt,Madiba Riddim,Drake,More Life
+0.506,0.371,110.017,0.0588,0.0149,3.56e-05,4,0.905,2,177840,-8.598,0.122,1,audio_features,spotify:track:0kCYaxWtR15Ljm0rvVvPQw,Madonna,Drake,If You're Reading This It's Too Late
+0.486,0.157,131.913,0.132,0.00268,0.000148,4,0.684,1,219893,-10.155,0.355,1,audio_features,spotify:track:7yfg0Eer6UZZt5tZ1XdsWz,Make Me Proud,Drake,Take Care (Deluxe)
+0.799,0.0562,102.327,0.284,0.109,0.0,5,0.521,9,302602,-6.183,0.821,0,audio_features,spotify:track:18e0XBdZg0g6INSn0p50fh,Man Of The Year,Champagne Pa,Closer To My Dreams
+0.419,0.36,91.963,0.39,0.4,0.0,4,0.5,10,309560,-7.349,0.313,0,audio_features,spotify:track:40IiSjljbAhrSbdJ3HxSfH,March 14,Drake,Scorpion
+0.26,0.0705,111.519,0.0921,0.646,0.00178,5,0.492,9,347227,-17.341,0.312,0,audio_features,spotify:track:047fCsbO4NdmwCBn8pcUXl,Marvins Room,Drake,Take Care (Deluxe)
+0.428,0.139,103.009,0.137,0.0673,0.0019,4,0.557,5,378600,-11.299,0.0996,1,audio_features,spotify:track:63FrXif0Pdu4NAPvTh87mw,Mine,Beyoncé,BEYONCÉ [Platinum Edition]
+0.864,0.331,100.814,0.603,0.081,0.0,5,0.429,2,305520,-5.975,0.333,1,audio_features,spotify:track:53VIWPPMz9S7ob0D8JxF9N,Miss Me,Drake,Thank Me Later (Int'l Version)
+0.95,0.163,151.955,0.213,0.0114,0.0,4,0.677,1,251760,-3.807,0.801,1,audio_features,spotify:track:68m5wT9BdSUhl60HOhiZGE,Mo Milly,Birdman,Pricele$$ (UK Deluxe Edition Explicit)
+0.575,0.276,85.994,0.0673,0.0443,0.00127,4,0.755,4,205147,-8.392,0.493,0,audio_features,spotify:track:7txPE73wHbuXYkM1h8zNrG,Mob Ties,Drake,Scorpion
+0.888,0.299,97.946,0.295,0.375,0.0,4,0.651,11,279307,-3.821,0.371,1,audio_features,spotify:track:39XNWKuuBZK0oaV5YmD2dF,Moment 4 Life,Nicki Minaj,Pink Friday
+0.578,0.353,133.03,0.0631,0.0095,0.0,4,0.708,6,258587,-8.686,0.696,1,audio_features,spotify:track:7vCWTZtxOcmgSEqndbVr5p,Money To Blow - Street Version,Birdman,Pricele$$ (UK Deluxe Edition Explicit)
+0.725,0.0961,157.652,0.0915,0.281,0.000387,4,0.669,11,241000,-8.307,0.562,0,audio_features,spotify:track:3t8pnImpBpOwxdtYBpKvA9,The Motion,Drake,Nothing Was The Same (Deluxe)
+0.442,0.111,201.8,0.356,0.000107,6.12e-05,4,0.766,1,181573,-8.558,0.39,1,audio_features,spotify:track:4Kz4RdRCceaA9VgTqBhBfa,The Motto,Drake,Take Care (Deluxe)
+0.674,0.138,143.067,0.164,0.202,1.22e-05,4,0.694,0,241867,-4.991,0.46,0,audio_features,spotify:track:4rdPNHlIYUbSfa4iuQ7ccz,Mr. Wrong,Mary J. Blige,My Life II...The Journey Continues (Act 1)
+0.899,0.0959,76.93,0.395,0.00934,0.0,4,0.314,6,310936,-4.0,0.859,0,audio_features,spotify:track:22CBNGzjjfqOKqjdKLKoTQ,My Darlin Baby,Champagne Pa,Even Closer To My Dreams
+0.536,0.102,119.088,0.0799,0.109,0.000428,4,0.624,2,248432,-9.575,0.131,0,audio_features,spotify:track:1JUvB8LRKYoik4BB1bEJWK,My Love (feat. Drake),Majid Jordan,Majid Jordan
+0.623,0.243,143.888,0.308,0.501,7.5e-06,4,0.616,9,115640,-7.233,0.458,1,audio_features,spotify:track:11eVz92Nm7b2CTgA8OJVwp,Never Satisfied,Future,Honest
+0.909,0.0778,93.469,0.0628,0.0884,0.000114,4,0.7,8,210747,-6.461,0.757,1,audio_features,spotify:track:0HVv5bEOiI9a0QfgcASXpX,Nice For What,Drake,Scorpion
+0.51,0.0797,123.961,0.185,0.0836,0.0658,4,0.911,2,261733,-10.786,0.191,1,audio_features,spotify:track:4OURH8h9ylAU1aD4eSspiI,No Complaints,Metro Boomin,No Complaints
+0.553,0.514,139.023,0.276,0.0788,3.17e-06,4,0.865,1,272453,-7.012,0.443,1,audio_features,spotify:track:0WtVtCK5SEFvyyA5V8D9CI,No Frauds,Nicki Minaj,No Frauds
+0.606,0.11,131.926,0.0476,0.158,0.0,4,0.683,1,211827,-7.057,0.369,1,audio_features,spotify:track:3y6e01poVQDru5OLUu8nhE,No Guns Allowed,Snoop Lion,Reincarnated (Deluxe Version)
+0.674,0.415,130.585,0.225,0.0176,0.0,4,0.467,6,239187,-5.919,0.581,0,audio_features,spotify:track:2ukW8cSQW0qvMomTF7FkAS,No Lie,2 Chainz,No Lie (Explicit Version)
+0.608,0.533,97.063,0.234,0.0671,0.0,4,0.913,10,149569,-6.839,0.578,0,audio_features,spotify:track:3GIlkmoqNZ3FC406hjYWOj,No Long Talk,Drake,More Life
+0.673,0.459,124.978,0.158,0.00595,0.0,4,0.699,2,308333,-6.337,0.231,1,audio_features,spotify:track:5oVlbbiKGdGeZkWCFy0mqk,No New Friends - SFTB Remix,DJ Khaled,Suffering From Success (Deluxe Version)
+0.49,0.142,83.508,0.251,0.0125,0.00101,4,0.895,10,227727,-10.31,0.257,0,audio_features,spotify:track:24BSTATmWEmrPOgEM17bfN,No Shopping,French Montana,No Shopping
+0.467,0.135,95.024,0.301,0.543,0.0,4,0.823,0,310933,-10.394,0.618,0,audio_features,spotify:track:2xpoTj7AeSFVuvD0ibD3Pg,No Tellin',Drake,If You're Reading This It's Too Late
+0.405,0.105,154.984,0.14,0.0306,0.00698,4,0.909,6,238613,-8.133,0.455,0,audio_features,spotify:track:2Vx8E3K5icPZR7OCklWBXX,Nonstop,Drake,Scorpion
+0.234,0.358,96.882,0.159,0.332,0.00156,4,0.766,11,153725,-7.544,0.256,0,audio_features,spotify:track:1bJlwtRVds707na4C02LAj,Nothings Into Somethings,Drake,More Life
+0.481,0.101,107.806,0.0322,0.124,0.0,4,0.555,10,281320,-7.419,0.0981,0,audio_features,spotify:track:3ougl2AEOsSN6AX5MiFOxx,Now & Forever,Drake,If You're Reading This It's Too Late
+0.725,0.0821,128.04,0.0676,0.574,0.0,4,0.802,0,225000,-5.965,0.598,0,audio_features,spotify:track:1iLv1ieT9BZ3qsti9yTCnG,Odio,Romeo Santos,"Fórmula, Vol. 2 (Deluxe Edition)"
+0.671,0.261,104.038,0.254,0.176,0.0,4,0.854,11,193893,-6.303,0.366,1,audio_features,spotify:track:3ZLGTV6JNrVKiSp7P3Ngb8,The One,Mary J. Blige,Stronger withEach Tear
+0.619,0.351,103.989,0.0532,0.00784,0.00423,4,0.791,1,173987,-5.886,0.371,1,audio_features,spotify:track:1xznGGDReH1oQq0xzbwXa3,One Dance,Drake,Views
+0.506,0.0922,119.954,0.469,0.359,0.0,4,0.866,8,312187,-6.913,0.272,0,audio_features,spotify:track:6OTaps5Xn8XEWraT29bAwW,Only,Nicki Minaj,Only
+0.847,0.124,99.768,0.202,0.0107,0.0,5,0.39,4,233560,-5.611,0.448,0,audio_features,spotify:track:1EoHEkVcysf4WVDx6r9WzQ,Over,Drake,Thank Me Later (Int'l Version)
+0.592,0.111,97.201,0.129,0.0384,1.86e-05,4,0.794,8,177827,-6.973,0.177,1,audio_features,spotify:track:5i70f6KOnmtRCbutYnLvVC,Over Here - feat. Drake,PARTYNEXTDOOR,PARTYNEXTDOOR
+0.57,0.179,185.516,0.306,0.759,2.1e-06,4,0.489,1,272573,-10.291,0.584,1,audio_features,spotify:track:2Gnsof1hvZzjE1xdLRpjtf,Over My Dead Body,Drake,Take Care (Deluxe)
+0.819,0.0607,103.008,0.198,0.0565,0.0,4,0.753,2,261013,-4.797,0.532,1,audio_features,spotify:track:5ukPDpFnFeto4Z1KSvZcP8,OVO Life,Aubrey,Drank
+0.343,0.304,103.029,0.115,0.0496,4.13e-05,4,0.653,8,252053,-11.327,0.284,0,audio_features,spotify:track:3EJ9ZuqkL1kwgouugqsLu8,Own It,Drake,Nothing Was The Same (Deluxe)
+0.388,0.0954,172.118,0.311,0.52,0.000102,4,0.52,10,251298,-12.32,0.129,0,audio_features,spotify:track:2GNyxFmIlarr7uR6JRX6yM,Paris Morton Music,Champagne Pa,Even Closer To My Dreams
+0.553,0.111,84.24,0.457,0.254,0.0,5,0.548,9,306067,-10.328,0.874,1,audio_features,spotify:track:6PCTcrrmgzkk8f7KM8hSDi,Pass The Dutch,Young Money,We Are Young Money
+0.463,0.109,111.98,0.0396,0.256,0.085,4,0.809,11,298941,-11.377,0.364,1,audio_features,spotify:track:7hDc8b7IXETo14hHIHdnhd,Passionfruit,Drake,More Life
+0.217,0.106,92.007,0.0387,0.847,0.000123,4,0.689,9,206027,-13.539,0.272,0,audio_features,spotify:track:2RAeY8dPj6KmStROfEigjV,Peak,Drake,Scorpion
+0.477,0.157,170.99,0.325,0.0106,0.0,3,0.84,1,202085,-6.599,0.36,1,audio_features,spotify:track:1h0VyjjtKqqvMNjW82JyyE,Plastic Bag,Drake,What A Time To Be Alive
+0.572,0.246,135.956,0.378,0.157,0.0,4,0.779,6,300160,-9.985,0.647,0,audio_features,spotify:track:3MLOAIJNWWS8FQpvdaiKR7,Poetic Justice,Kendrick Lamar,"good kid, m.A.A.d city (Deluxe)"
+0.456,0.105,133.051,0.127,0.215,2.41e-06,4,0.724,7,212947,-10.009,0.0481,1,audio_features,spotify:track:1WRy5l3TwrwlzNmB5bOeKw,Pop Style,Drake,Views
+0.912,0.65,137.998,0.113,0.0596,0.0,4,0.739,2,304880,-1.253,0.582,1,audio_features,spotify:track:3i43sen71xwqz3nfy9fLus,Pop That,French Montana,Pop That
+0.853,0.34,78.033,0.104,0.00189,0.0,4,0.629,0,320160,-4.36,0.373,1,audio_features,spotify:track:4dW8NOc0DGanKYnfNlIadn,Poppin Bottles (feat. Drake),T.I.,No Mercy
+0.443,0.276,136.078,0.264,0.0172,0.0,4,0.925,1,236615,-8.216,0.35,1,audio_features,spotify:track:2jG6ifTWXk0AvonlgcXGgZ,Portland,Drake,More Life
+0.755,0.114,93.685,0.5,0.139,1.37e-05,4,0.538,2,433800,-6.766,0.261,1,audio_features,spotify:track:4RI9eX7jNcdaQOJifn7t6z,Pound Cake / Paris Morton Music 2,Drake,Nothing Was The Same (Deluxe)
+0.239,0.12,104.675,0.0876,0.574,7.76e-05,4,0.446,1,237733,-15.327,0.31,1,audio_features,spotify:track:0jF2AdhsalO1L7KkhK4LE5,Practice,Drake,Take Care (Deluxe)
+0.511,0.104,65.256,0.475,0.165,8.95e-05,4,0.605,11,236973,-8.094,0.379,0,audio_features,spotify:track:7n4Kv0ArEyRh8p4wO5fG78,Preach,Drake,If You're Reading This It's Too Late
+0.83,0.0755,150.049,0.211,0.188,0.0,4,0.767,5,272438,-5.188,0.884,0,audio_features,spotify:track:73uciYJKxzPsweVrTXrdJj,Put It Down (feat. Drake),Drake,Trill O.G.
+0.599,0.219,167.909,0.327,0.317,0.0,3,0.727,1,197133,-6.941,0.386,1,audio_features,spotify:track:0Y0TOsE1q11qgbi7c5WZsG,R.I.C.O. (feat. Drake),Meek Mill,Dreams Worth More Than Money
+0.767,0.461,111.813,0.373,0.418,0.0,5,0.644,10,315716,-3.703,0.847,0,audio_features,spotify:track:7aq5uiJZM47v3qBVYcmsDk,Ransom,Champagne Pa,Closer To My Dreams
+0.535,0.106,168.03,0.1,0.458,0.00246,4,0.648,2,207307,-13.295,0.444,1,audio_features,spotify:track:16x6tqeSkIjoLEf7SJLlYy,Ratchet Happy Birthday,Drake,Scorpion
+0.309,0.12,65.041,0.385,0.166,0.0,4,0.567,8,321080,-14.254,0.509,1,audio_features,spotify:track:74atKkOasLOVzvqB6mYgga,The Real Her,Drake,Take Care (Deluxe)
+0.541,0.102,119.501,0.0426,0.0102,0.0,4,0.643,2,311197,-5.801,0.165,1,audio_features,spotify:track:5wUUWVRvrciJqFitZF8R0P,Recognize (feat. Drake),PARTYNEXTDOOR,PARTYNEXTDOOR TWO
+0.311,0.116,119.237,0.113,0.625,1.29e-06,4,0.66,0,333947,-8.681,0.357,1,audio_features,spotify:track:2DTNkIFrsB8nQ5Gt8vJAmZ,Redemption,Drake,Views
+0.737,0.116,81.475,0.188,0.83,0.0,4,0.439,0,225360,-8.123,0.631,1,audio_features,spotify:track:31FWGQxshq14SCZvvyHae1,The Resistance,Drake,Thank Me Later (Int'l Version)
+0.702,0.343,155.948,0.205,0.517,0.0,4,0.556,0,351000,-10.079,0.793,0,audio_features,spotify:track:4xRxYWgAtL6pzRz94GlZlA,The Ride,Drake,Take Care (Deluxe)
+0.841,0.538,75.975,0.307,0.0441,0.0,4,0.546,3,271947,-4.303,0.506,0,audio_features,spotify:track:2odU2tlJGVEn4cgMqEZ36S,Right Above It,Lil Wayne,I Am Not A Human Being
+0.301,0.089,100.519,0.237,0.117,0.0,4,0.915,2,190595,-7.657,0.351,1,audio_features,spotify:track:0MAubp6s6yJTTaVQtX0VVB,Right Hand,Drake,Right Hand
+0.57,0.329,92.073,0.042,0.0233,0.0,4,0.639,1,204187,-4.966,0.728,1,audio_features,spotify:track:134ih8wLwhgx292RjhefXA,Right Here,Justin Bieber,Believe
+0.758,0.141,140.02,0.26,0.343,0.0,4,0.712,9,266000,-4.835,0.903,1,audio_features,spotify:track:3KRsRqcimXCJ6uzVm6iPSx,Round Of Applause - feat. Drake,Waka Flocka Flame,Round Of Applause (feat. Drake)
+0.439,0.138,139.112,0.397,0.0407,0.0,4,0.903,8,307593,-11.813,0.532,1,audio_features,spotify:track:0XpEoWpZqlQpGFYZXDU2Hj,Sacrifices,Drake,More Life
+0.391,0.103,137.077,0.101,0.715,0.00029,4,0.467,1,257724,-13.537,0.178,1,audio_features,spotify:track:1pLdqRVxYbzKeSBZG86PnV,Same Mistakes,Champagne Pa,Closer To My Dreams
+0.85,0.142,152.102,0.25,0.047,0.0,4,0.487,1,216333,-5.427,0.523,1,audio_features,spotify:track:1sPLURKAosM3Jampgp9AWq,Sandra’s Rose,Drake,Scorpion
+0.713,0.712,79.934,0.0911,0.0845,0.0,4,0.555,11,240920,-4.549,0.725,1,audio_features,spotify:track:49GYdiLjYMrUKr7H5YXHto,Say Something (Featuring Drake),Timbaland,Shock Value II (International Deluxe version)
+0.766,0.0861,141.82,0.251,0.338,0.0,4,0.752,1,330770,-5.11,0.501,1,audio_features,spotify:track:63M8PK8yavNITSViKUB62p,Schemin Up (feat. Drake and P. Reign),OB OBrien,Schemin Up (feat. Drake and P. Reign)
+0.416,0.0974,86.678,0.384,0.0931,1.12e-05,3,0.511,0,209288,-9.203,0.289,0,audio_features,spotify:track:7jyDNWA876J5iY3YT2GAZD,Scholarships,Drake,What A Time To Be Alive
+0.931,0.176,87.593,0.329,0.124,0.0,4,0.617,8,218384,-6.053,0.394,0,audio_features,spotify:track:4JUOxZkdBzBqMTwber0StH,Scriptures,Champagne Pa,Even Closer To My Dreams
+0.617,0.148,93.945,0.591,0.223,0.00688,4,0.745,8,106627,-7.642,0.802,0,audio_features,spotify:track:2wPcX8yxKCYXIsTjzNSZWO,Share,Slakah The Beatchild,Soul Movement Vol I
+0.841,0.242,100.14,0.119,0.000402,0.0,5,0.364,8,305840,-4.831,0.0837,1,audio_features,spotify:track:66cIVXwMJQKw4GnxIiCeP2,She Will,Lil Wayne,Tha Carter IV (Deluxe)
+0.465,0.567,143.015,0.235,0.0555,0.0,4,0.566,2,224720,-11.714,0.177,1,audio_features,spotify:track:6Z01gUquJsjJC67uNWm6P0,Shot For Me,Drake,Take Care (Deluxe)
+0.734,0.116,128.31,0.117,0.0385,0.0,4,0.665,6,210360,-6.066,0.706,0,audio_features,spotify:track:1G0JddH0MHVg4VE03vheBm,Show Me A Good Time,Drake,Thank Me Later (Int'l Version)
+0.435,0.0978,119.819,0.0844,0.412,0.0,4,0.541,9,419307,-9.302,0.393,0,audio_features,spotify:track:4BDgGQXx7jO2JgC7bpFsIv,Shut It Down,Drake,Thank Me Later (Int'l Version)
+0.73,0.124,155.008,0.222,0.00513,0.0,4,0.834,8,312820,-3.714,0.446,1,audio_features,spotify:track:2xLMifQCjDGFmkHkpNLD9h,SICKO MODE,Travis Scott,ASTROWORLD
+0.727,0.112,107.371,0.0606,0.0864,0.00406,4,0.801,0,234373,-4.687,0.218,1,audio_features,spotify:track:5EnYT6F7wEcdege6mDHEfO,Signs,Drake,Signs
+0.266,0.209,153.292,0.13,0.348,9.55e-06,4,0.468,0,368036,-11.121,0.222,1,audio_features,spotify:track:1bVGWGMSNAzc8qhnXzx328,Since Way Back,Drake,More Life
+0.822,0.155,86.733,0.252,0.0103,4.2e-06,5,0.745,7,143214,-6.354,0.415,1,audio_features,spotify:track:61ASZHKdQHSIV4MEt0bRgw,Skepta Interlude,Drake,More Life
+0.797,0.331,157.954,0.0677,0.000744,0.0,4,0.574,0,257693,-8.617,0.319,0,audio_features,spotify:track:6dRnCe4S9UhKHqLnAgniGE,So Good,Shanell,So Good
+0.642,0.213,117.286,0.0658,0.0201,0.000108,4,0.398,4,129867,-6.709,0.298,1,audio_features,spotify:track:60h8MWD0VoidWGL5cuICnm,Something More,Aubrey,Drank
+0.392,0.198,91.938,0.17,0.747,8.81e-06,4,0.521,3,294973,-7.88,0.166,1,audio_features,spotify:track:6Zmu6xxHXVYccyNKxHvZCD,Star67,Drake,If You're Reading This It's Too Late
+0.523,0.161,86.311,0.196,0.0365,0.0,4,0.792,8,174120,-7.856,0.545,1,audio_features,spotify:track:3dgQqOiQ9fCKVhNOedd2lf,Started From the Bottom,Drake,Nothing Was The Same (Deluxe)
+0.719,0.162,162.09,0.291,0.0833,0.0,4,0.448,7,267720,-4.179,0.301,0,audio_features,spotify:track:3ejrk4i0LWIofaaBEmwX0A,Stay Schemin,Rick Ross,Stay Schemin
+0.864,0.434,119.198,0.372,0.375,1.15e-06,5,0.51,8,223480,-4.795,0.239,0,audio_features,spotify:track:1emIAVxi4SrgY6xf1uZoxh,Still Got It,Tyga,Still Got It
+0.438,0.649,133.958,0.152,0.0212,0.0,3,0.834,0,189853,-9.577,0.207,1,audio_features,spotify:track:7juAP7GZBF0Dtm0qqLSWOJ,Still Here,Drake,Views
+0.66,0.282,118.377,0.496,0.074,0.0,5,0.778,1,247547,-9.508,0.743,1,audio_features,spotify:track:7dCPr8kqjWRmAdm5zGUg17,Stuntin,Lil Wayne,Dedication 3 Gangsta Grillz
+0.416,0.114,159.109,0.387,0.464,0.0,4,0.735,8,350621,-7.939,0.229,1,audio_features,spotify:track:1WvBza6fVzy7OK2JbWKRyn,Successful,Drake,So Far Gone
+0.482,0.11,136.015,0.0356,0.481,0.0457,4,0.776,1,247893,-11.268,0.128,1,audio_features,spotify:track:0w1ZtnzQmtmuuoKxHT0pLL,Summer Games,Drake,Scorpion
+0.46,0.147,146.274,0.382,0.00354,2.71e-05,4,0.594,1,202451,-7.607,0.0541,1,audio_features,spotify:track:2ZRJRe82aZaVhOKKlbJr4v,Summer Sixteen,Drake,Summer Sixteen
+0.267,0.0992,131.962,0.0297,0.372,0.00411,3,0.687,4,106333,-8.818,0.307,0,audio_features,spotify:track:7JANfTi37pZykRjB1JvPTV,Summers Over Interlude,Drake,Views
+0.777,0.0837,116.477,0.047,0.00324,0.00125,4,0.41,5,254293,-8.538,0.609,1,audio_features,spotify:track:7yz2gGAf8i13FnAu4JmC6Q,Sunflower - feat. Drake,Lenny Kravitz,Black and White America
+0.593,0.123,84.763,0.284,0.134,0.0,4,0.685,9,136187,-9.083,0.144,0,audio_features,spotify:track:71SEHJPt1iDwGkBhUOAXDP,Survival,Drake,Scorpion
+0.515,0.0888,121.845,0.265,0.0267,1.22e-05,4,0.629,0,277387,-10.358,0.299,0,audio_features,spotify:track:124NFj84ppZ5pAxTuVQYCQ,Take Care,Drake,Take Care (Deluxe)
+0.479,0.302,140.089,0.186,0.0039,5.3e-06,4,0.759,11,195813,-10.65,0.347,1,audio_features,spotify:track:3Yw09dj3cTXsAzlLjgBfIP,Talk Up,Drake,Scorpion
+0.283,0.115,97.04,0.0846,0.111,0.0172,4,0.766,8,219692,-10.33,0.144,0,audio_features,spotify:track:5ACkknqH2GcrVtmBB7LaRv,Teenage Fever,Drake,More Life
+0.771,0.119,76.222,0.42,0.279,0.0,4,0.499,8,328573,-4.851,0.748,1,audio_features,spotify:track:5Us8wh9hCAQ8Uq1ast5CWz,Thank Me Now,Drake,Thank Me Later (Int'l Version)
+0.451,0.108,85.417,0.249,0.152,0.0537,4,0.81,10,157600,-6.348,0.359,0,audio_features,spotify:track:0SVsEdvot6vU4byv5yW0oj,That’s How You Feel,Drake,Scorpion
+0.852,0.13,113.619,0.25,0.307,0.0,5,0.519,1,247667,-6.696,0.551,0,audio_features,spotify:track:1pEDdOIbtqaFb72B3pOrsY,Throw It In The Bag - Remix,Fabolous,Mandated
+0.812,0.21,159.869,0.241,0.0184,0.000375,4,0.461,10,193902,-5.776,0.72,0,audio_features,spotify:track:3pC1ILr9KzmQLMe8Kn5QBG,To the Max,DJ Khaled,To the Max
+0.738,0.286,143.161,0.072,0.0112,0.0,4,0.671,10,248227,-5.328,0.212,0,audio_features,spotify:track:4hjloKONMQyJHOmSzAwuAq,Tony Montana,Future,Pluto
+0.648,0.102,117.983,0.117,0.0573,3.49e-05,4,0.804,7,263373,-7.805,0.392,1,audio_features,spotify:track:11KJSRSgaDxqydKYiD2Jew,Too Good,Drake,Views
+0.559,0.121,140.201,0.52,0.157,0.0,4,0.632,6,261867,-5.891,0.156,1,audio_features,spotify:track:5LnXWeA9tuWKI2C1H74iiJ,Too Much,Drake,Nothing Was The Same (Deluxe)
+0.694,0.137,143.894,0.505,0.153,0.0,4,0.74,1,188320,-7.488,0.249,1,audio_features,spotify:track:1nFgXsg2CUbyK0BJX9cmfj,Trophies,Young Money,Rise Of An Empire (Deluxe Edition)
+0.674,0.12,105.096,0.0499,0.0644,1.83e-05,4,0.896,10,219227,-6.89,0.516,0,audio_features,spotify:track:1H6FVVPoDB5R9SOkPLW2zz,Truffle Butter,Nicki Minaj,Truffle Butter
+0.488,0.107,73.509,0.294,0.781,0.0,5,0.388,11,281678,-7.837,0.548,0,audio_features,spotify:track:3uhzuJujperrebqY70RJG1,Trust Issues,Champagne Pa,Even Closer To My Dreams
+0.664,0.105,140.163,0.211,0.215,0.000118,4,0.77,0,321987,-5.604,0.472,1,audio_features,spotify:track:4PWY72AubTjoZrohQt0pWn,Tuesday (feat. Drake),ILoveMakonnen,I LOVE MAKONNEN
+0.672,0.262,79.638,0.39,0.107,0.0,4,0.542,6,366400,-5.436,0.281,1,audio_features,spotify:track:69gz9onZQNVw55cMQsaYii,Tuscan Leather,Drake,Nothing Was The Same (Deluxe)
+0.838,0.127,88.052,0.212,0.337,0.0,4,0.529,8,238960,-2.619,0.355,1,audio_features,spotify:track:2vJVj76Sn1L0M6gJhNihMH,"Two Birds, One Stone",Drake,"Two Birds, One Stone"
+0.421,0.139,87.694,0.137,0.376,7.23e-06,4,0.442,2,297373,-11.455,0.111,1,audio_features,spotify:track:1my81o4N4vaHpcMlA3Gj4y,U With Me?,Drake,Views
+0.603,0.11,86.162,0.0944,0.728,0.0,4,0.531,7,282027,-6.242,0.228,1,audio_features,spotify:track:4o4wEDRqotccDTXiQ7TORu,Un-thinkable (I'm Ready) - Remix,Alicia Keys,Un-thinkable (I'm Ready) [Remix]
+0.712,0.198,156.209,0.27,5.2e-05,0.0,4,0.487,8,212613,-7.323,0.397,1,audio_features,spotify:track:1D9XLqQp2YYiOxrr5KLb8K,Under Ground Kings,Drake,Take Care (Deluxe)
+0.872,0.107,156.109,0.119,0.0951,0.0,4,0.562,4,213813,-5.108,0.072,0,audio_features,spotify:track:0XhOgqDKTQJhGfD1WBuTdC,Unforgettable,Drake,Thank Me Later (Int'l Version)
+0.658,0.615,81.933,0.195,0.182,0.0,4,0.591,0,212347,-5.881,0.623,0,audio_features,spotify:track:51q0vXgCI2CW9x4K8SdfXS,Unusual - feat. Drake,Trey Songz,"Passion, Pain & Pleasure"
+0.809,0.336,156.344,0.282,0.00778,1.62e-05,4,0.592,7,234333,-4.667,0.272,1,audio_features,spotify:track:55YHftnlehUQQJoTSLKCxj,Up All Night,Drake,Thank Me Later (Int'l Version)
+0.754,0.212,128.012,0.269,0.00356,0.0,4,0.761,1,380575,-4.674,0.381,1,audio_features,spotify:track:20HrYeWxZwGMuTycTXX0QK,Uptown,Drake,So Far Gone
+0.427,0.0818,96.023,0.107,0.0703,0.00033,4,0.926,10,268480,-7.584,0.305,0,audio_features,spotify:track:31LIXek4OCRgKJn4RWg5Yb,Used To,Drake,If You're Reading This It's Too Late
+0.727,0.196,164.992,0.208,0.0312,0.0,4,0.618,3,180520,-7.224,0.401,0,audio_features,spotify:track:3V8sM5OOG6YfDuDLa2IIYJ,Used to This,Future,Used to This
+0.705,0.339,132.05,0.243,0.0218,0.0,4,0.845,6,246047,-4.271,0.334,0,audio_features,spotify:track:0XGLsSU6wtfnKXiMNvQr61,Versace (Remix),Migos,Versace (feat. Drake) [Remix] - Single
+0.871,0.243,78.119,0.367,0.07,0.0,4,0.446,5,311960,-5.837,0.0795,1,audio_features,spotify:track:6Q9FvTex292zY3qUpPTptJ,Views,Drake,Views
+0.527,0.146,100.12,0.173,0.185,0.0,4,0.435,9,211427,-8.057,0.283,1,audio_features,spotify:track:2f3qhXIqyplACygV2R90cP,Waiting Up,Aubrey,Drank
+0.631,0.108,145.968,0.205,0.0717,0.0,4,0.909,9,276147,-5.447,0.394,1,audio_features,spotify:track:1jr1BnpXymcf2i97mTR8tJ,Walk It Talk It,Migos,Culture II
+0.507,0.241,100.017,0.0445,0.0741,3.21e-05,4,0.717,4,199020,-8.595,0.198,0,audio_features,spotify:track:7bPLo5Fv7h15E2fW3g1mVQ,Wanna Know Remix (feat. Drake),Dave,Wanna Know Remix (feat. Drake)
+0.843,0.434,153.877,0.135,0.201,0.0,4,0.462,4,202173,-4.903,0.494,0,audio_features,spotify:track:1eVr0CjFAfnnrNLyn87llQ,We In This 1.5 (feat. Drake and Future),DJ Drama,We In This 1.5 (feat. Drake and Future)
+0.842,0.266,116.016,0.24,0.0928,0.0,4,0.736,3,339879,-6.361,0.723,1,audio_features,spotify:track:3ltQPTXhrON8jhi7WFPNRm,We Made It,Champagne Pa,Even Closer To My Dreams
+0.488,0.64,193.397,0.422,0.00171,0.0,4,0.386,1,247947,-7.303,0.217,0,audio_features,spotify:track:7udsBKuqnJ5csWTAkR0vEI,We'll Be Fine,Drake,Take Care (Deluxe)
+0.466,0.215,135.089,0.0512,0.729,7.63e-06,4,0.321,9,212280,-8.163,0.194,0,audio_features,spotify:track:4xsUpuoiYy06Of1LtLcz0G,Wednesday Night Interlude,Drake,If You're Reading This It's Too Late
+0.722,0.273,82.918,0.322,0.0733,0.0,4,0.62,1,253533,-7.022,0.365,1,audio_features,spotify:track:5rn98Px14UpOBtDuhZAAvV,Weston Road Flows,Drake,Views
+0.764,0.156,159.952,0.458,0.0494,0.0,4,0.417,1,264120,-5.364,0.525,1,audio_features,spotify:track:7zOTHPkTMxYNpYaFUCokmV,What Up,Pimp C,The Naked Soul of Sweet Jones
+0.784,0.1,100.027,0.0779,0.232,0.0,4,0.703,2,263173,-2.942,0.569,1,audio_features,spotify:track:5FTCKvxzqy72ceS4Ujux4N,What's My Name?,Rihanna,Loud
+0.839,0.0622,93.524,0.306,0.0662,0.0,4,0.579,10,114077,-7.232,0.724,0,audio_features,spotify:track:206LpI7P45CdZQOM3KFLe3,Where To Now,Champagne Pa,Closer To My Dreams
+0.507,0.113,106.967,0.0919,0.41,0.000117,4,0.633,5,254480,-12.488,0.749,0,audio_features,spotify:track:3iESHfoVBkzBt325gEYjJY,Where Were You,Aubrey,Drank
+0.453,0.14,161.997,0.338,0.0933,0.0,4,0.813,1,208027,-6.941,0.191,1,audio_features,spotify:track:5nN8BwAQDJDguq7Dpd3JQQ,Where Ya At,Future,DS2 (Deluxe)
+0.406,0.0892,193.068,0.437,0.0304,0.0,4,0.681,4,233507,-9.83,0.172,1,audio_features,spotify:track:1mfsQje0xKuw9u3RUwrocx,Who Do You Love?,YG,My Krazy Life
+0.362,0.139,93.008,0.591,0.0442,0.0,4,0.927,0,196587,-9.329,0.389,0,audio_features,spotify:track:2tlkU66loXhmV2JqTHlz5T,Why You Always Hatin?,YG,Still Brazy (Deluxe)
+0.589,0.11,139.751,0.392,0.074,0.0,4,0.826,5,255139,-5.489,0.297,0,audio_features,spotify:track:0WHxt7NjSS6FvajiQTURJQ,Wildfire (OVO Remix),SBTRKT,Wildfire
+0.612,0.664,118.844,0.442,0.0303,0.0,5,0.54,1,267624,-10.683,0.472,0,audio_features,spotify:track:7j9xi8N0gbYG9rXwqQ7gBG,The Winner,Champagne Pa,Closer To My Dreams
+0.407,0.112,127.97,0.256,0.152,0.000188,4,0.872,1,195053,-10.036,0.802,1,audio_features,spotify:track:4p3hA9qjCRix74GyuI3Qm5,With You,Drake,Views
+0.467,0.242,150.783,0.0622,0.762,0.0,4,0.391,8,229373,-7.451,0.468,1,audio_features,spotify:track:5fX5REubGobYCqH6obz3nn,With You,Lil Wayne,I Am Not A Human Being (Explicit Version)
+0.534,0.0919,91.974,0.0946,0.0752,0.0,4,0.725,11,219320,-6.238,0.558,1,audio_features,spotify:track:50R3hdsZQeg3k8zJdVphSZ,Work,Rihanna,ANTI
+0.781,0.185,109.945,0.147,0.158,0.0,4,0.771,9,270200,-6.361,0.407,1,audio_features,spotify:track:3X37NtwadSS0RM20dh2IgP,Worst Behavior,Drake,Nothing Was The Same (Deluxe)
+0.43,0.0998,99.915,0.188,0.0503,0.0,4,0.844,8,217600,-8.44,0.37,0,audio_features,spotify:track:1HnhCD1u0c4dHSMazmWGyM,Wu-Tang Forever,Drake,Nothing Was The Same (Deluxe)
+0.346,0.108,119.958,0.53,0.035,0.0,4,0.964,5,142273,-9.309,0.562,0,audio_features,spotify:track:1wsf1YFQSYND45y0GzJmf7,Yes Indeed,Lil Baby,Yes Indeed
+0.476,0.129,154.531,0.282,0.166,0.0,4,0.574,3,264907,-7.444,0.223,1,audio_features,spotify:track:6RrmYcWmDRmlR45kMTIZXg,You & The 6,Drake,If You're Reading This It's Too Late
+0.77,0.24,86.902,0.296,0.537,5.62e-06,4,0.563,11,229146,-12.877,0.696,1,audio_features,spotify:track:2d619casRJTy5SuzRy7wXW,You Know You Know,Champagne Pa,Closer To My Dreams
+0.523,0.1,139.951,0.0839,0.305,0.000411,4,0.616,3,418507,-8.105,0.258,0,audio_features,spotify:track:0HUpfgkE3FulPgF5gR0v8u,The Zone,The Weeknd,Trilogy
+0.747,0.623,82.835,0.272,0.236,0.0,4,0.558,11,182126,-7.294,0.468,0,audio_features,spotify:track:44OIUsntX5iRnVy5EvbCgM,Zone,Champagne Pa,Closer To My Dreams

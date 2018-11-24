@@ -1,0 +1,784 @@
+---
+title: "Simran's Music Analysis"
+output:
+  html_document:
+    toc: false
+    toc_depth: 2
+    toc_float: false
+
+---
+
+# Projects {.tabset}
+
+## "Old Drake" vs. "New Drake"
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(knitr)
+library(rjson)
+library(tidytext)
+library(scales)
+library(plotly)
+```
+### "Old Drake" vs. "New Drake"
+
+####Project Summary
+Rapper/singer Aubrey Graham, who goes by the stage name Drake, is one of the most charted, streamed, and decorated artist in recent history. Having been in the music industry for well over ten years, Drake is subject to much critique over the transformation of his music throughout the decade, and this debate has coined the terms "Old Drake" and "New Drake."  A general consensus is that now he lacks the same lyricism ability that he used to possess in his older work.  He is now criticized for submitting to mainstream tropes in music by making his music more radio friendly than "authentically" hip-hop.  On the other hand of the debate, people don't believe that this distinction between Old Drake and New Drake actually exists, but rather it is an unfounded critique that comes with the territory of being successful.  These people claim that Drake's new music is not much different than his old music, but his new music is subjected to more hate because of his stardom.  This analysis aims to answer the question: is there a difference between "Old Drake" vs. "New Drake," and if so, what are these differences?  Through data, can we validate the claims that Drake's new music lacks lyrical quality and follows more traditionally "mainstream" patterns of music?
+
+I tackle the question of Old Drake vs. New Drake through data visualization.  In terms of lyrics, I've acquired all of the lyrics to Drake's major projects from 2006 to present via [Genius](https://genius.com/artists/Drake).  I use the tidytext library in R to analyze the density of the lyrics, and I use the NRC Emotion Lexicon in R to get data on the sentiment/sentimental substance of Drake's lyrics.  In tandem with this, I used the "spotipy" package in Python to get audio data on Drake's songs.  For some of this analysis, I used logistic machine learning in Python to judge Drake's sound.  I merged audio and lyrical data  into one dataset, and have used the plotly and ggplot2 libraries in R to create visuals.  Here are the main visuals that demonstrate the differences in question. The plots reveal insights that are not intuitive just by listening to his music, and some observations are contradictory to the mainstream consensus.  A few of these graphs are interactive, and you can hover to see song titles or summary data.
+
+Beyond identifying the distinction between Old Drake and New Drake, the point of this project is to emphasize how we can look at music differently through data.  Often conversations like Old Drake vs. New Drake arise, and data, especially data visualization which summarizes findings in an easily digestible way, adds a new twist to these conversations about music.  We can see through the plots that Drake's lyricism has changed, but instead of having the mainstream quality of being repetitive, it has just become less emotional.  In addition, his music has become more radio friendly with the increasing levels of danceability, but he is not becoming more 'pop' as people suggest. These are just a few findings.  With my own experience doing this project, data visualization has changed the way I listen to music as I've added another level in the ways that I experience music.    
+
+
+
+####How Lyrically Repetitive is Old Drake vs. New Drake
+```{r plots, echo=FALSE, warning=FALSE, message=FALSE, height=8, width=8}
+#create into dataset
+drake <- read.csv("summer.csv")
+
+#coerce lyrics into character class, change If You're Reading This It's Too Late to IYRTITL
+#and Nothing Was the Same to NWTS; remove 2 rows with no data.
+drake <- mutate(drake, lyrics=as.character(lyrics))
+drake <- mutate(drake, album = as.factor(drake$album))
+drake <- mutate(drake, album=fct_recode(album, 
+                                        "IYRTITL"="If You're Reading This It's Too Late", 
+                                        "NWTS" = "Nothing Was the Same"))
+drake <- filter(drake, album!="")
+write.csv(drake, file = "drake.csv")
+
+#unnest tokens
+unnest_drake <- drake %>%
+  unnest_tokens(word, lyrics)
+
+#nrc lexicon
+nrc <- filter(sentiments, lexicon=="nrc")
+
+songtotal_drake <- unnest_drake %>%
+  count(song, word, sort=TRUE) %>%
+  ungroup()
+
+songtotal_drake2 <- songtotal_drake %>%
+  group_by(song) %>% 
+  summarize(totalwords = sum(n)) %>%
+  ungroup()
+
+songtotal_drake3 <- left_join(songtotal_drake, songtotal_drake2)
+nrc_song <- inner_join(songtotal_drake3, nrc)
+nrc_song <- rename(nrc_song, "wordcount"="n")
+
+song_drake <- nrc_song %>%
+  group_by(song, sentiment) %>%
+  count(sentiment, sort=FALSE, wt=1/totalwords) %>%
+  ungroup()
+
+#merging sentiment proportions into one dataset
+song_drakewide <- spread(song_drake, sentiment, n)
+wrong <- anti_join(drake, song_drakewide)
+wrong <- mutate(wrong, anger=NA,
+                anticipation=NA,
+                disgust=NA,
+                fear=NA,
+                joy=NA,
+                negative=NA,
+                positive=NA,
+                sadness=NA,
+                surprise=NA,
+                trust=NA)
+song_drakewide <- merge(song_drakewide, drake)
+song_drakewide <- rbind(song_drakewide, wrong)
+song_drakewide <- select(song_drakewide, -lyrics)
+
+
+#run drake2
+#tokennize the data
+token_lyrics <- drake %>%
+  unnest_tokens(word, lyrics)
+
+count_lyrics1 <- token_lyrics %>%
+  count(song) %>%
+  ungroup()
+
+song_total <- token_lyrics %>%
+  count(song, word) %>%
+  count(song) %>%
+  rename(unique = nn)
+
+density_drake <- left_join(count_lyrics1, song_total)
+density_drake <- mutate(density_drake, proportion = unique/n)
+
+#merge with above dataset
+all_lyrics <- merge(density_drake, song_drakewide)
+
+#clean audio data
+drake_audio <- read.csv("drake_audio.csv")
+clean_audio <- filter(drake_audio, album=="Scorpion"|
+                      album=="Views"|
+                      album=="If You're Reading This It's Too Late"|
+                      album=="More Life"|
+                      album=="Nothing Was The Same (Deluxe)"|
+                      album=="Take Care (Deluxe)"|
+                      album=="So Far Gone"|
+                      album=="Thank Me Later (Int'l Version)")
+#no comeback season, room for improvement
+clean_audio <- mutate(clean_audio, album=fct_recode(album, 
+                                        "IYRTITL"="If You're Reading This It's Too Late", 
+                                        "NWTS" = "Nothing Was The Same (Deluxe)", 
+                                        "Take Care" = "Take Care (Deluxe)",
+                                        "Thank Me Later" = "Thank Me Later (Int'l Version)"))
+clean_audio$title <- gsub("????T", "'", clean_audio$title)
+clean_audio <- select(clean_audio, -artist, -uri, -type)
+clean_audio <- rename(clean_audio, song = title)
+wrong <- anti_join(clean_audio, all_lyrics)
+also_wrong <- anti_join(all_lyrics, clean_audio)
+clean_audio <- mutate(clean_audio, song=fct_recode(song,
+                                                   "6PM in New York" = "6PM In New York", 
+                                                   "305 to My City" = "305 To My City",
+                                                   "Buried Alive" = "Buried Alive Interlude", 
+                                                   "Cameras" = "Cameras / Good Ones Go Interlude - Medley",
+                                                   "Child's Play" = "Childs Play",
+                                                   "HYFR" = "HYFR (Hell Ya Fucking Right)",
+                                                   "Marvin's Room" = "Marvins Room",
+                                                   "Keep the Family Close" = "Keep The Family Close",
+                                                   "Nice for What" = "Nice For What", 
+                                                   "Shot for Me" = "Shot For Me",
+                                                   "Show Me a Good Time" = "Show Me A Good Time",
+                                                   "Started from the Bottom" = "Started From the Bottom"))
+clean_audio$album[11] <- "So Far Gone"
+clean_audio <- filter(clean_audio, song!="Fear"|
+                        song!="I'm Goin In")
+joint_data <- inner_join(all_lyrics, clean_audio)
+
+#add new drake vs. old drake
+joint_data <- mutate(joint_data, "class" = NA)
+newdrake <- filter(joint_data, album=="Scorpion" |
+                     album=="Views"|
+                     album=="More Life"|
+                     album=="IYRTITL")
+newdrake <- mutate(newdrake, class="New Drake")
+olddrake <- filter(joint_data, album=="NWTS"|
+                     album=="Take Care"|
+                     album=="Thank Me Later"|
+                     album=="So Far Gone")
+olddrake <- mutate(olddrake, class="Old Drake")
+joint_sets <- rbind(olddrake, newdrake)
+
+#interactive box plots
+test <- spread(joint_sets, key="class", value="proportion")
+
+f <- list(
+  family = "Courier New, monospace",
+  size = 18,
+  color = "#7f7f7f")
+y <- list(
+  title = "how repetitive the song is",
+  titlefont = f)
+p <- plot_ly(test, y=~1/`Old Drake`, type="box", name="Old Drake", text=~song, hoverinfo="text",
+                       boxpoints = "all", jitter = 0.3, pointpos = -1.8, showlegend=FALSE) %>%
+             add_trace(y = ~1/`New Drake`, type="box", name = "New Drake", text = ~song, hoverinfo="text",
+                       boxpoints = "all", jitter = 0.3, pointpos = 1.8, showlegend=FALSE) %>%
+             layout(yaxis=y)
+p
+```
+
+
+####Is Old Drake or New Drake More Emotional?
+```{r emotional, echo=FALSE, message=FALSE, warning=FALSE, fig.width = 8}
+test <- gather(joint_sets, key="sentiment", value="emotion", anger:trust)
+sentiment <- write.csv(test, "sentiment.csv")
+g <- ggplot(test, aes(x=class, y=emotion, fill=class)) + 
+  geom_bar(stat="summary", fun.y="mean") +
+  facet_wrap(~sentiment) +
+  labs(x="", y="proportion of emotion") + 
+  ggtitle("Proportion of Emotion in New Drake vs. Old Drake")
+g
+
+```
+![](sentiment2.png)
+
+
+####Can Machine Learning Accurately Predict Old Drake vs. New Drake?
+```{r old v new, echo=FALSE, message=FALSE, warning=FALSE}
+afinn <- filter(sentiments, lexicon=="AFINN")
+afinnmerge_drake <- left_join(unnest_drake, afinn)
+afinnmerge_drake <- mutate(afinnmerge_drake, score = ifelse(is.na(score), 0, score))
+
+#remove certain cuss words that are not coded correctly because of lack of context
+word <- c("ass", "fucking", "fuck", "shit", "damn", "hell", "bitches", "bitch", "nigga", "niggas")
+word_vector <- word
+word <- data.frame(word)
+afinnmerge_drake1 <- anti_join(afinnmerge_drake, word)
+
+#count the total score in each song
+afinn_count <- afinnmerge_drake1 %>%
+  group_by(song) %>%
+  summarize(total=sum(score)) %>%
+  ungroup()
+
+#merge with original untokenized data
+afinn_tidy <- left_join(drake, afinn_count)
+
+#time series
+afinn_tidy <- mutate(afinn_tidy, track = 1:203)
+
+
+
+old <- filter(joint_sets, class=="Old Drake")
+new <- filter(joint_sets, class=="New Drake")
+
+write.csv(old, "old.csv")
+write.csv(new, "new.csv")
+oldnew <- read.csv("old_new.csv")
+
+
+
+clean_audio <- filter(oldnew, album=="Scorpion"|
+                        album=="Views"|
+                        album=="If You're Reading This It's Too Late"|
+                        album=="More Life"|
+                        album=="Nothing Was The Same (Deluxe)"|
+                        album=="Take Care (Deluxe)"|
+                        album=="So Far Gone"|
+                        album=="Thank Me Later (Int'l Version)")
+#no comeback season, room for improvement
+clean_audio <- mutate(clean_audio, album=fct_recode(album, 
+                                                    "IYRTITL"="If You're Reading This It's Too Late", 
+                                                    "NWTS" = "Nothing Was The Same (Deluxe)", 
+                                                    "Take Care" = "Take Care (Deluxe)",
+                                                    "Thank Me Later" = "Thank Me Later (Int'l Version)"))
+clean_audio$title <- gsub("????T", "'", clean_audio$title)
+clean_audio <- select(clean_audio, -artist, -uri, -type)
+clean_audio <- rename(clean_audio, song = title)
+wrong <- anti_join(clean_audio, all_lyrics)
+also_wrong <- anti_join(all_lyrics, clean_audio)
+clean_audio <- mutate(clean_audio, song=fct_recode(song,
+                                                   "6PM in New York" = "6PM In New York", 
+                                                   "305 to My City" = "305 To My City",
+                                                   "Buried Alive" = "Buried Alive Interlude", 
+                                                   "Cameras" = "Cameras / Good Ones Go Interlude - Medley",
+                                                   "Child's Play" = "Childs Play",
+                                                   "HYFR" = "HYFR (Hell Ya Fucking Right)",
+                                                   "Marvin's Room" = "Marvins Room",
+                                                   "Keep the Family Close" = "Keep The Family Close",
+                                                   "Nice for What" = "Nice For What", 
+                                                   "Shot for Me" = "Shot For Me",
+                                                   "Show Me a Good Time" = "Show Me A Good Time",
+                                                   "Started from the Bottom" = "Started From the Bottom"))
+clean_audio$album[11] <- "So Far Gone"
+clean_audio <- filter(clean_audio, song!="Fear"|
+                        song!="I'm Goin In")
+joint_data <- inner_join(all_lyrics, clean_audio)
+
+#add new drake vs. old drake
+joint_data <- mutate(joint_data, "class" = NA)
+newdrake <- filter(joint_data, album=="Scorpion" |
+                     album=="Views"|
+                     album=="More Life"|
+                     album=="IYRTITL")
+newdrake <- mutate(newdrake, class="New Drake")
+olddrake <- filter(joint_data, album=="NWTS"|
+                     album=="Take Care"|
+                     album=="Thank Me Later"|
+                     album=="So Far Gone")
+olddrake <- mutate(olddrake, class="Old Drake")
+joint_sets <- rbind(olddrake, newdrake)
+track_list <- inner_join(joint_sets, afinn_tidy)
+track_list <- select(track_list, -lyrics, -total)
+track_list <- arrange(track_list, track)
+track_list <- mutate(track_list, track = 1:102)
+
+p <- plot_ly(data = track_list, x = ~track, y = ~predictions, text=~song, hoverinfo="text",
+             color=~album) # from plotly library
+p
+
+
+
+
+# Sys.setenv("plotly_username"="simranbat")
+# Sys.setenv("plotly_api_key"="air0e0qwoQBrd6v7aarj")
+# api_create(p, filename = "machine_learning_newvsold")
+```
+
+####Is New Drake More Pop than Old Drake?
+```{r pop, echo=FALSE, message=FALSE, warning=FALSE}
+
+
+drake_audio <- read.csv("pop_rap.csv")
+clean_audio <- filter(drake_audio, album=="Scorpion"|
+                        album=="Views"|
+                        album=="If You're Reading This It's Too Late"|
+                        album=="More Life"|
+                        album=="Nothing Was The Same (Deluxe)"|
+                        album=="Take Care (Deluxe)"|
+                        album=="So Far Gone"|
+                        album=="Thank Me Later (Int'l Version)")
+#no comeback season, room for improvement
+clean_audio <- mutate(clean_audio, album=fct_recode(album, 
+                                                    "IYRTITL"="If You're Reading This It's Too Late", 
+                                                    "NWTS" = "Nothing Was The Same (Deluxe)", 
+                                                    "Take Care" = "Take Care (Deluxe)",
+                                                    "Thank Me Later" = "Thank Me Later (Int'l Version)"))
+clean_audio$title <- gsub("????T", "'", clean_audio$title)
+clean_audio <- select(clean_audio, -artist, -uri, -type)
+clean_audio <- rename(clean_audio, song = title)
+wrong <- anti_join(clean_audio, all_lyrics)
+also_wrong <- anti_join(all_lyrics, clean_audio)
+clean_audio <- mutate(clean_audio, song=fct_recode(song,
+                                                   "6PM in New York" = "6PM In New York", 
+                                                   "305 to My City" = "305 To My City",
+                                                   "Buried Alive" = "Buried Alive Interlude", 
+                                                   "Cameras" = "Cameras / Good Ones Go Interlude - Medley",
+                                                   "Child's Play" = "Childs Play",
+                                                   "HYFR" = "HYFR (Hell Ya Fucking Right)",
+                                                   "Marvin's Room" = "Marvins Room",
+                                                   "Keep the Family Close" = "Keep The Family Close",
+                                                   "Nice for What" = "Nice For What", 
+                                                   "Shot for Me" = "Shot For Me",
+                                                   "Show Me a Good Time" = "Show Me A Good Time",
+                                                   "Started from the Bottom" = "Started From the Bottom"))
+clean_audio$album[11] <- "So Far Gone"
+clean_audio <- filter(clean_audio, song!="Fear"|
+                        song!="I'm Goin In")
+joint_data <- inner_join(all_lyrics, clean_audio)
+
+#add new drake vs. old drake
+joint_data <- mutate(joint_data, "class" = NA)
+newdrake <- filter(joint_data, album=="Scorpion" |
+                     album=="Views"|
+                     album=="More Life"|
+                     album=="IYRTITL")
+newdrake <- mutate(newdrake, class="New Drake")
+olddrake <- filter(joint_data, album=="NWTS"|
+                     album=="Take Care"|
+                     album=="Thank Me Later"|
+                     album=="So Far Gone")
+olddrake <- mutate(olddrake, class="Old Drake")
+joint_sets <- rbind(olddrake, newdrake)
+track_list <- inner_join(joint_sets, afinn_tidy)
+track_list <- select(track_list, -lyrics, -total)
+track_list <- arrange(track_list, track)
+track_list <- mutate(track_list, track = 1:102)
+
+
+
+
+p <- track_list %>%
+  plot_ly(
+    x = ~class,
+    y = ~1-predictions,
+    split = ~class,
+    type = 'violin',
+    showlegend=FALSE,
+    box = list(
+      visible = T
+    ),
+    meanline = list(
+      visible = T
+    )
+  ) %>% 
+  layout(
+    xaxis = list(
+      title = "Class"
+    ),
+    yaxis = list(
+      title = "how pop the song is",
+      zeroline = F
+    )
+  )
+p
+
+# 
+# Sys.setenv("plotly_username"="simranbat")
+# Sys.setenv("plotly_api_key"="air0e0qwoQBrd6v7aarj")
+# api_create(p, filename = "machine_learning_popvsrap")
+```
+
+####Does New Drake Only Make Radio Friendly Music?
+```{r sigh, message=FALSE, warning=FALSE, echo=FALSE}
+albums <- spread(joint_sets, key="album", value="danceability")
+f <- list(
+  family = "Courier New, monospace",
+  size = 18,
+  color = "#7f7f7f")
+y <- list(
+  title = "danceability",
+  titlefont = f)
+p <- plot_ly(albums, y=~`So Far Gone`, type="box", name="So Far Gone", text=~song, hoverinfo="text", showlegend=FALSE,
+             boxpoints = "all", jitter = 0.3, pointpos = 1.8) %>%
+  add_trace(y = ~`Thank Me Later`, type="box", name = "Thank Me Later", text = ~song, hoverinfo="text",
+            boxpoints = "all", jitter = 0.3, pointpos = 1.8) %>%
+  add_trace(y = ~`Take Care`, type="box", name = "Take Care", text = ~song, hoverinfo="text",
+            boxpoints = "all", jitter = 0.3, pointpos = 1.8) %>%
+  add_trace(y = ~`NWTS`, type="box", name = "NWTS", text = ~song, hoverinfo="text",
+            boxpoints = "all", jitter = 0.3, pointpos = 1.8) %>%
+  add_trace(y = ~`IYRTITL`, type="box", name = "IYRTITL", text = ~song, hoverinfo="text",
+            boxpoints = "all", jitter = 0.3, pointpos = 1.8) %>%
+  add_trace(y = ~`Views`, type="box", name = "Views", text = ~song, hoverinfo="text",
+            boxpoints = "all", jitter = 0.3, pointpos = 1.8) %>%
+  add_trace(y = ~`More Life`, type="box", name = "More Life", text = ~song, hoverinfo="text",
+            boxpoints = "all", jitter = 0.3, pointpos = 1.8) %>%
+  add_trace(y = ~`Scorpion`, type="box", name = "Scorpion", text = ~song, hoverinfo="text",
+            boxpoints = "all", jitter = 0.3, pointpos = 1.8) %>%
+  layout(yaxis=y)
+p
+
+# Sys.setenv("plotly_username"="simranbat")
+# Sys.setenv("plotly_api_key"="air0e0qwoQBrd6v7aarj")
+# api_create(p, filename = "machine_learning_danceability")
+
+```
+
+
+## Exploratory Sentiment Analysis of Drake
+
+###Exploratory Sentiment Analysis of Drake
+
+####Introduction
+
+
+I used data from [Genius](https://genius.com/artists/Drake) to compile a spreadsheet of all of Drake's lyrics from his albums because I wanted to explore trends in the sentiments.  I used "lexicon" in tidytext.  Given that Drake's lyrics contain a lot of slang, obviously this lexicon could not provide a wholly accurate depiction of the sentiments in his lyrics.  Thus this analysis is mostly exploratory in nature.  
+
+Genius had data for the albums *Comeback Season*, *If You're Reading This It's Too Late*, *More Life*, *Nothing Was the Same*, *Room for Improvement*, *So Far Gone*, *Take Care*, *Thank Me Later*, *Views*, and *Scorpion*.  There were a few other albums listed on the website, but those were either too short to be significant for this analysis, or they were almost identical to another album with only a handful of added songs.  Singles that are not tied to an album were not included.  For the sake of brevity in writing the code and for the appearance of the graphs, *If You're Reading This It's Too Late* is simplified to *IYRTITL* and *Nothing Was the Same* is simplifeid to *NWTS*.
+
+
+```{r cleaning the data, echo=FALSE, message=FALSE}
+#create into dataset
+drake <- read.csv("summer.csv")
+
+#coerce lyrics into character class, change If You're Reading This It's Too Late to IYRTITL
+#and Nothing Was the Same to NWTS; remove 2 rows with no data.
+drake <- mutate(drake, lyrics=as.character(lyrics))
+drake <- mutate(drake, album = as.factor(drake$album))
+drake <- mutate(drake, album=fct_recode(album, 
+                                        "IYRTITL"="If You're Reading This It's Too Late", 
+                                        "NWTS" = "Nothing Was the Same"))
+drake <- filter(drake, album!="")
+write.csv(drake, file = "drake.csv")
+```
+
+
+#### tf-idf score
+
+The letters tf stands for term frequency whereas idf stands for inverse document frequency.  A tf-idf score is essentially the frequency of a word in a document given the frequency of word in a whole collection of documents.  For this analysis, that means a word with a high tf-idf score for an album appears more uniquely frequently in that album than any other album.  We can get a general sense of how an album distinguishes itself by looking at words with the highest tf-idf scores.  
+
+```{r tf-df scores, fig.width=8, fig.height=12, echo=FALSE, message=FALSE}
+#unnest tokens
+unnest_drake <- drake %>%
+  unnest_tokens(word, lyrics)
+
+#count how many times each word appears in each album
+count_drake <- unnest_drake %>%
+  count(album, word, sort = TRUE) %>%
+  ungroup()
+
+#count the total words in each album
+totalwords_drake <- count_drake %>% 
+  group_by(album) %>% 
+  summarize(totalwords = sum(n)) %>%
+  ungroup()
+
+#merge to one data set
+words_drake <- left_join(count_drake, totalwords_drake, by="album")
+
+#remove stop words
+data(stop_words)
+nostopwords_drake <- unnest_drake %>% 
+  anti_join(stop_words, by="word")
+
+#tf_idf variables
+countwords_drake <- nostopwords_drake %>%
+  count(album, word, sort = TRUE) %>%
+  bind_tf_idf(word, album, n)
+
+#graph
+g <- countwords_drake %>% 
+  arrange(desc(tf_idf)) %>%
+  mutate(word = factor(word, levels = rev(unique(word)))) %>%
+  group_by(album) %>% 
+  top_n(7) %>% 
+  ungroup %>%
+  ggplot(aes(word, tf_idf, fill = album)) +
+  geom_col(show.legend = FALSE) +
+  labs(x = NULL, y = "tf-idf score") +
+  ggtitle("highest tf-idf scores per album") +
+  facet_wrap(~album, ncol = 2, scales = "free") +
+  coord_flip()
+g
+```
+
+
+Several qualitative observations can be made from this.  *IYRTITL* has words like "preach" and "woes" as well as "lonely" and "leaving" as its top words, perhaps indicating that it is an emotional album with a range of positive and negative emotions.  We can also see the trend of the sonic qualities of his words over time with his use of unique words such as "skrrt", "ga", "mo", "ay", etc. 
+
+
+####bing positive and negative sentiments
+
+The lexicon package has a lexicon called bing that codes whether a word is positive or negative.  This graph shows the proportion positive and negative words for each album.
+
+```{r bing, echo=FALSE, fig.width=9, fig.height=5, message=FALSE}
+#get bing sentiments and merge
+bing <- filter(sentiments, lexicon=="bing")
+merge_lexicon <- merge(unnest_drake, bing)
+
+#count total positive and negative words
+test <-  merge_lexicon %>%
+  count(album, sentiment, sort=TRUE)
+
+#join that count with total number of words in each album
+ratio_drake <- left_join(test, totalwords_drake)
+
+#create new variable with proportion
+ratio_drake <- mutate(ratio_drake, n/totalwords)
+
+#bar graph
+g <- ggplot(ratio_drake, aes(x=album, y=n/totalwords, fill=sentiment)) +
+  geom_col(position="dodge") +
+  xlab("Album") +
+  ylab("Proportion of Words") + 
+  ggtitle("Proportion of Positive and Negative Words by Album") +
+  theme(axis.text.x = element_text(angle = 50, hjust = 1))
+g
+```
+
+
+####afinn sentiment score
+
+The AFINN score also exists within the lexicon package, and it measures the intensity of a word from -5 to 5.  A word with a -5 score would be considered amongst the most foul in the English language.
+
+From looking at the list of words with low afinn scores, I could already tell that hip-hop music vernacular would not translate because some low-ranked words could actually mean something positive with different context.  Given the high rate of these words in songs, I made an executive decision to remove them so that they would not affect the score.
+
+I organized the songs by album and then the order in which they appeared in the album, then assigned the song a number so I could perform a time series analysis.  Song 1 is the first song in his first project *Room for Improvement* and song 203 is his last song in *Scorpion*. 
+
+```{r afinn, echo=FALSE, message=FALSE, fig.width=11, fig.height=5, warnings=FALSE}
+#get afinn sentiment, merge with tokenized data, remove NA
+afinn <- filter(sentiments, lexicon=="AFINN")
+afinnmerge_drake <- left_join(unnest_drake, afinn)
+afinnmerge_drake <- mutate(afinnmerge_drake, score = ifelse(is.na(score), 0, score))
+
+#remove certain cuss words that are not coded correctly because of lack of context
+word <- c("ass", "fucking", "fuck", "shit", "damn", "hell", "bitches", "bitch")
+word_vector <- word
+word <- data.frame(word)
+afinnmerge_drake1 <- anti_join(afinnmerge_drake, word)
+
+#count the total score in each song
+afinn_count <- afinnmerge_drake1 %>%
+  group_by(song) %>%
+  summarize(total=sum(score)) %>%
+  ungroup()
+
+#merge with original untokenized data
+afinn_tidy <- left_join(drake, afinn_count)
+
+#time series
+afinn_tidy <- mutate(afinn_tidy, track = 1:203)
+
+g <- ggplot(afinn_tidy, aes(x=track, y=total)) +
+  geom_line() +
+  xlab("Song") +
+  ylab("AFINN Sentiment Score") +
+  ggtitle("An Emotional Analysis of Drake's Discography") +
+  geom_hline(aes(yintercept=0), colour="#990000", linetype="dotted")
+g
+```
+
+I included more graphs for a few individual albums.
+
+```{r afinn2, echo=FALSE, fig.width=9, fig.height=4.5, warnings=FALSE, message=FALSE}
+#scorpion
+scorpion_afinn <- filter(afinn_tidy, album=="Scorpion")
+g <- ggplot(scorpion_afinn, aes(x=fct_reorder(song, track), y=total, fill=album)) +
+  geom_col(show.legend=F) +
+  xlab("Song") +
+  ylab("AFINN Sentiment Score") +
+  ggtitle("An Emotional Analysis of Scorpion") +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1))
+g
+
+#views
+views_afinn <- filter(afinn_tidy, album=="Views")
+g <- ggplot(views_afinn, aes(x=fct_reorder(song, track), y=total, fill=album)) +
+  geom_col(show.legend=F) +
+  xlab("Song") +
+  ylab("AFINN Sentiment Score") +
+  ggtitle("An Emotional Analysis of Views") +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1))
+g
+
+#take care
+takecare_afinn <- filter(afinn_tidy, album=="Take Care")
+g <- ggplot(takecare_afinn, aes(x=fct_reorder(song, track), y=total, fill=album)) +
+  geom_col(show.legend=F) +
+  xlab("Song") +
+  ylab("AFINN Sentiment Score") +
+  ggtitle("An Emotional Analysis of Take Care") +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1))
+g
+
+#NWTS
+nwts_afinn <- filter(afinn_tidy, album=="NWTS")
+g <- ggplot(nwts_afinn, aes(x=fct_reorder(song, track), y=total, fill=album)) +
+  geom_col(show.legend=F) +
+  xlab("Song") +
+  ylab("AFINN Sentiment Score") +
+  ggtitle("An Emotional Analysis of Nothing Was The Same") +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1))
+g
+```
+
+I also included an emotional analysis of what is popularly deemed one of Drake's saddest songs, *Marvin's Room*.
+
+```{r Marvins Room, echo=FALSE, fig.width=9, fig.height=4.5, warnings=FALSE, message=FALSE}
+#emotional analysis of marvin's room
+
+#filter for just the song marvins room
+marvinsroom <- filter(drake, song=="Marvin's Room")
+
+#split by line, remove lines with no data or with [] prefaces
+unnest_marvinsroom <- data.frame(lyrics = unlist(strsplit(marvinsroom$lyrics, "\n")), 
+                                 stringsAsFactors= FALSE)
+unnest_marvinsroom <- filter(unnest_marvinsroom, lyrics != "")
+unnest_marvinsroom <- filter(unnest_marvinsroom, !grepl("]",lyrics))
+
+#add column for line number
+mrline <- unnest_marvinsroom %>%
+  mutate(line = 1:n()) %>%
+  dplyr::select(line, lyrics)
+
+#tokenize by word, merge, 0 words
+unnest_marvinsroom <- mrline %>%
+  unnest_tokens(word, lyrics)
+mrmerge <- left_join(unnest_marvinsroom, afinn)
+mrmerge <- mutate(mrmerge, score = ifelse(is.na(score), 0, score))
+
+#count total afinn score and merge
+mrtotal <- mrmerge %>%
+  group_by(line) %>%
+  summarize(total=sum(score)) %>%
+  ungroup()
+mrtidy <- left_join(mrline, mrtotal)
+
+#emotional sentiment line plot
+g <- ggplot(mrtidy, aes(x=line, y=total)) +
+  geom_line() +
+  xlab("Line number") +
+  ylab("Net Sentiment Score") +
+  ggtitle("An Emotional Analysis of Marvin's Room") +
+  geom_hline(aes(yintercept=0), colour="#990000", linetype="dotted")
+g
+```
+
+####nrc emotional lexicon
+To get a better grasp of the specific emotions, I tracked Drake's lyrics using the nrc lexicon. This lexicon has eight basic emotions: anger, fear, anticipation, trust, surprise, sadness, joy, positive, and negative. In the first graph, which is the top albums of each sentiment, take notice in how Drake's older albums dominate the lists.  This suggests that his older albums had more emotional substance than his newer ones. 
+
+```{r top albums of each sent and proportion of sent, warnings=FALSE, fig.width=12, fig.height=9, echo=FALSE, message=FALSE}
+nrc <- filter(sentiments, lexicon=="nrc")
+nrc_drake <- inner_join(unnest_drake, nrc)
+join_drake <- left_join(words_drake, nrc)
+join_drake <- rename(join_drake, "wordcount"="n")
+album_drake <- join_drake %>%
+  group_by(album, sentiment) %>%
+  count(sentiment, sort=FALSE, wt=1/totalwords) %>%
+  ungroup()
+album_drake <- filter(album_drake, sentiment!=is.na(sentiment))
+
+album_drake %>% 
+  group_by(sentiment) %>%  
+  top_n(3) %>% 
+  ungroup %>%
+  ggplot(aes(album, n, fill = album)) +
+  geom_col(show.legend = FALSE) +
+  labs(x = NULL, y = "Proportion") +
+  facet_wrap(~sentiment, ncol = 3, scales = "free") +
+  ggtitle("Top Albums of Each Sentiment") + 
+  coord_flip()
+
+#positive, negative and trust were the top 3 sentiments for each
+#album so I removed them to show the top 3 other sentiments
+album_drake1 <- filter(album_drake, sentiment != "positive")
+album_drake1 <- filter(album_drake1, sentiment != "negative")
+album_drake1 <- filter(album_drake1, sentiment != "trust")
+
+album_drake1 %>% 
+  group_by(album) %>%  
+  top_n(5) %>% 
+  ungroup %>%
+  ggplot(aes(sentiment, n, fill = album)) +
+  geom_col(show.legend = FALSE) +
+  labs(x = NULL, y = "Proportion") +
+  facet_wrap(~album, ncol = 3, scales = "free") +
+  ggtitle("Proportion of Sentiments by Album") + 
+  coord_flip()
+
+#top song of each sentiment
+songtotal_drake <- unnest_drake %>%
+  count(song, word, sort=TRUE) %>%
+  ungroup()
+
+songtotal_drake2 <- songtotal_drake %>%
+  group_by(song) %>% 
+  summarize(totalwords = sum(n)) %>%
+  ungroup()
+
+songtotal_drake3 <- left_join(songtotal_drake, songtotal_drake2)
+nrc_song <- inner_join(songtotal_drake3, nrc)
+nrc_song <- rename(nrc_song, "wordcount"="n")
+
+song_drake <- nrc_song %>%
+  group_by(song, sentiment) %>%
+  count(sentiment, sort=FALSE, wt=1/totalwords) %>%
+  ungroup()
+song_drake <- inner_join(song_drake, drake)
+song_drake1 <- song_drake
+song_drake <- select(song_drake, song, sentiment, n)
+song_drake <- filter(song_drake, sentiment!=is.na(sentiment))
+
+song_drake %>% 
+  group_by(sentiment) %>%
+  top_n(3) %>%
+  ungroup %>%
+  ggplot(aes(song, n, fill=sentiment)) +
+  geom_col(show.legend = FALSE) +
+  labs(x = NULL, y = "Proportion") +
+  facet_wrap(~sentiment, ncol = 2, scales = "free") +
+  ggtitle("Top Songs of Each Sentiment") + 
+  coord_flip()
+```
+
+
+In relation to the above, I also wrote code to capture the top song of a few of the sentiments.
+
+
+
+#####saddest songs
+```{r sad songs, warnings=FALSE, echo=FALSE, message=FALSE}
+
+sad_songs <- select(song_drake1, album, song, sentiment, n)
+sad_songs <- filter(sad_songs, sentiment=="sadness")
+sad_songs <- arrange(sad_songs, -n)
+kable(head(select(sad_songs, album, song, n), 15), format="html")
+```
+
+
+
+#####most joyful songs
+```{r joy songs, warnings=FALSE, echo=FALSE, message=FALSE}
+joy_songs <- select(song_drake1, album, song, sentiment, n)
+joy_songs <- filter(joy_songs, sentiment=="joy")
+joy_songs <- arrange(joy_songs, -n)
+kable(head(select(joy_songs, album, song, n), 15), format="html")
+```
+
+
+
+#####angriest songs
+```{r top song of each sentiment, warnings=FALSE, echo=FALSE, message=FALSE}
+angry_songs <- select(song_drake1, album, song, sentiment, n)
+angry_songs <- filter(angry_songs, sentiment=="anger")
+angry_songs <- arrange(angry_songs, -n)
+kable(head(select(angry_songs, album, song, n), 15), format="html")
+```
+
+
+
+####conclusion
+As a brief conclusion, given that this is mostly exploratory and a direct question was not asked, one thing to note is how Drake's older music tends to have more emotion/sentiment than his newer music. This could bring us to ask the difference between "Old Drake" vs. "New Drake."

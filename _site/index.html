@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Simran’s Music Analysis</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Simran's Website</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Music Analysis</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Simran’s Music Analysis</h1>
+
+</div>
+
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>I used data from <a href="https://genius.com/artists/Drake">Genius</a> to compile a spreadsheet of all of Drake’s lyrics from his albums because I wanted to explore trends in the sentiments. I used “lexicon” in tidytext. Given that Drake’s lyrics contain a lot of slang, obviously this lexicon could not provide a wholly accurate depiction of the sentiments in his lyrics. Thus this analysis is mostly exploratory in nature.</p>
+<p>Genius had data for the albums <em>Comeback Season</em>, <em>If You’re Reading This It’s Too Late</em>, <em>More Life</em>, <em>Nothing Was the Same</em>, <em>Room for Improvement</em>, <em>So Far Gone</em>, <em>Take Care</em>, <em>Thank Me Later</em>, <em>Views</em>, and <em>Scorpion</em>. There were a few other albums listed on the website, but those were either too short to be significant for this analysis, or they were almost identical to another album with only a handful of added songs. Singles that are not tied to an album were not included. For the sake of brevity in writing the code and for the appearance of the graphs, <em>If You’re Reading This It’s Too Late</em> is simplified to <em>IYRTITL</em> and <em>Nothing Was the Same</em> is simplifeid to <em>NWTS</em>.</p>
+</div>
+<div id="tf-idf-score" class="section level2">
+<h2>tf-idf score</h2>
+<p>The letters tf stands for term frequency whereas idf stands for inverse document frequency. A tf-idf score is essentially the frequency of a word in a document given the frequency of word in a whole collection of documents. For this analysis, that means a word with a high tf-idf score for an album appears more uniquely frequently in that album than any other album. We can get a general sense of how an album distinguishes itself by looking at words with the highest tf-idf scores.</p>
+<pre><code>## Selecting by tf_idf</code></pre>
+<p><img src="index_files/figure-html/tf-df%20scores-1.png" width="864" /></p>
+<p>Several qualitative observations can be made from this. <em>IYRTITL</em> has words like “preach” and “woes” as well as “lonely” and “leaving” as its top words, perhaps indicating that it is an emotional album with a range of positive and negative emotions. We can also see the trend of the sonic qualities of his words over time with his use of unique words such as “skrrt”, “ga”, “mo”, “ay”, etc.</p>
+</div>
+<div id="bing-positive-and-negative-sentiments" class="section level1">
+<h1>bing positive and negative sentiments</h1>
+<p>The lexicon package has a lexicon called bing that codes whether a word is positive or negative. This graph shows the proportion positive and negative words for each album.</p>
+<pre><code>## Joining, by = &quot;album&quot;</code></pre>
+<p><img src="index_files/figure-html/bing-1.png" width="864" /></p>
+</div>
+<div id="afinn-sentiment-score" class="section level1">
+<h1>afinn sentiment score</h1>
+<p>The AFINN score also exists within the lexicon package, and it measures the intensity of a word from -5 to 5. A word with a -5 score would be considered amongst the most foul in the English language.</p>
+<p>From looking at the list of words with low afinn scores, I could already tell that hip-hop music vernacular would not translate because some low-ranked words could actually mean something positive with different context. Given the high rate of these words in songs, I made an executive decision to remove them so that they would not affect the score.</p>
+<p>I organized the songs by album and then the order in which they appeared in the album, then assigned the song a number so I could perform a time series analysis. Song 1 is the first song in his first project <em>Room for Improvement</em> and song 203 is his last song in <em>Scorpion</em>.</p>
+<pre><code>## Joining, by = &quot;word&quot;
+## Joining, by = &quot;word&quot;</code></pre>
+<pre><code>## Warning: Column `word` joining character vector and factor, coercing into
+## character vector</code></pre>
+<pre><code>## Joining, by = &quot;song&quot;</code></pre>
+<p><img src="index_files/figure-html/afinn-1.png" width="1056" /></p>
+<p>I included more graphs for a few individual albums.</p>
+<p><img src="index_files/figure-html/afinn2-1.png" width="864" /><img src="index_files/figure-html/afinn2-2.png" width="864" /><img src="index_files/figure-html/afinn2-3.png" width="864" /><img src="index_files/figure-html/afinn2-4.png" width="864" /><img src="index_files/figure-html/afinn2-5.png" width="864" /></p>
+<p>I also included an emotional analysis of what is popularly deemed one of Drake’s saddest songs, <em>Marvin’s Room</em>.</p>
+<pre><code>## Joining, by = &quot;word&quot;</code></pre>
+<pre><code>## Joining, by = &quot;line&quot;</code></pre>
+<p><img src="index_files/figure-html/Marvins%20Room-1.png" width="864" /></p>
+</div>
+<div id="nrc-emotional-lexicon" class="section level1">
+<h1>nrc emotional lexicon</h1>
+<p>To get a better grasp of the specific emotions, I tracked Drake’s lyrics using the nrc lexicon. This lexicon has eight basic emotions: anger, fear, anticipation, trust, surprise, sadness, joy, positive, and negative. In the first graph, which is the top albums of each sentiment, take notice in how Drake’s older albums dominate the lists. This suggests that his older albums had more emotional substance than his newer ones.</p>
+<pre><code>## Joining, by = &quot;word&quot;
+## Joining, by = &quot;word&quot;</code></pre>
+<pre><code>## Selecting by n</code></pre>
+<p><img src="index_files/figure-html/top%20albums%20of%20each%20sent%20and%20proportion%20of%20sent-1.png" width="1152" /></p>
+<pre><code>## Selecting by n</code></pre>
+<p><img src="index_files/figure-html/top%20albums%20of%20each%20sent%20and%20proportion%20of%20sent-2.png" width="1152" /></p>
+<pre><code>## Joining, by = &quot;song&quot;</code></pre>
+<pre><code>## Joining, by = &quot;word&quot;</code></pre>
+<pre><code>## Joining, by = &quot;song&quot;</code></pre>
+<pre><code>## Selecting by n</code></pre>
+<p><img src="index_files/figure-html/top%20albums%20of%20each%20sent%20and%20proportion%20of%20sent-3.png" width="1152" /></p>
+<p>In relation to the above, I also wrote code to capture the top song of a few of the sentiments.</p>
+<div id="saddest-songs" class="section level2">
+<h2>saddest songs</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+album
+</th>
+<th style="text-align:left;">
+song
+</th>
+<th style="text-align:right;">
+n
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Take Care
+</td>
+<td style="text-align:left;">
+Shot for Me
+</td>
+<td style="text-align:right;">
+0.0290557
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Take Care
+</td>
+<td style="text-align:left;">
+Buried Alive
+</td>
+<td style="text-align:right;">
+0.0281385
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+More Life
+</td>
+<td style="text-align:left;">
+Jorja Interlude
+</td>
+<td style="text-align:right;">
+0.0261194
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comeback Season
+</td>
+<td style="text-align:left;">
+Intro
+</td>
+<td style="text-align:right;">
+0.0250000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comeback Season
+</td>
+<td style="text-align:left;">
+The Last Hope
+</td>
+<td style="text-align:right;">
+0.0249307
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Room for Improvement
+</td>
+<td style="text-align:left;">
+U.P.A.
+</td>
+<td style="text-align:right;">
+0.0240964
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comeback Season
+</td>
+<td style="text-align:left;">
+Asthma Team
+</td>
+<td style="text-align:right;">
+0.0234604
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+So Far Gone
+</td>
+<td style="text-align:left;">
+The Calm
+</td>
+<td style="text-align:right;">
+0.0234114
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Room for Improvement
+</td>
+<td style="text-align:left;">
+A Scorpio’s Mind
+</td>
+<td style="text-align:right;">
+0.0223881
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+So Far Gone
+</td>
+<td style="text-align:left;">
+Brand New
+</td>
+<td style="text-align:right;">
+0.0219780
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Room for Improvement
+</td>
+<td style="text-align:left;">
+Bad Meaning Good
+</td>
+<td style="text-align:right;">
+0.0212264
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Take Care
+</td>
+<td style="text-align:left;">
+Over My Dead Body
+</td>
+<td style="text-align:right;">
+0.0204082
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Take Care
+</td>
+<td style="text-align:left;">
+Headlines
+</td>
+<td style="text-align:right;">
+0.0184255
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+So Far Gone
+</td>
+<td style="text-align:left;">
+Lust for Life
+</td>
+<td style="text-align:right;">
+0.0181818
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+So Far Gone
+</td>
+<td style="text-align:left;">
+Say What’s Real
+</td>
+<td style="text-align:right;">
+0.0177515
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="most-joyful-songs" class="section level2">
+<h2>most joyful songs</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+album
+</th>
+<th style="text-align:left;">
+song
+</th>
+<th style="text-align:right;">
+n
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Views
+</td>
+<td style="text-align:left;">
+Summers Over Interlude
+</td>
+<td style="text-align:right;">
+0.0581395
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Room for Improvement
+</td>
+<td style="text-align:left;">
+Extra Special
+</td>
+<td style="text-align:right;">
+0.0381166
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Room for Improvement
+</td>
+<td style="text-align:left;">
+U.P.A.
+</td>
+<td style="text-align:right;">
+0.0301205
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+IYRTITL
+</td>
+<td style="text-align:left;">
+Wednesday Night Interlude
+</td>
+<td style="text-align:right;">
+0.0284360
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comeback Season
+</td>
+<td style="text-align:left;">
+Asthma Team
+</td>
+<td style="text-align:right;">
+0.0263930
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+More Life
+</td>
+<td style="text-align:left;">
+Madiba Riddim
+</td>
+<td style="text-align:right;">
+0.0263158
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Views
+</td>
+<td style="text-align:left;">
+Weston Road Flows
+</td>
+<td style="text-align:right;">
+0.0250991
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Scorpion
+</td>
+<td style="text-align:left;">
+8 Out Of 10
+</td>
+<td style="text-align:right;">
+0.0238663
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Scorpion
+</td>
+<td style="text-align:left;">
+I’m Upset
+</td>
+<td style="text-align:right;">
+0.0238663
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NWTS
+</td>
+<td style="text-align:left;">
+From Time
+</td>
+<td style="text-align:right;">
+0.0235911
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Thank Me Later
+</td>
+<td style="text-align:left;">
+9AM in Dallas
+</td>
+<td style="text-align:right;">
+0.0235479
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Scorpion
+</td>
+<td style="text-align:left;">
+Final Fantasy
+</td>
+<td style="text-align:right;">
+0.0228758
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Scorpion
+</td>
+<td style="text-align:left;">
+Ratchet Happy Birthday
+</td>
+<td style="text-align:right;">
+0.0228758
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Take Care
+</td>
+<td style="text-align:left;">
+Lord Knows
+</td>
+<td style="text-align:right;">
+0.0224439
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comeback Season
+</td>
+<td style="text-align:left;">
+Must Hate Money
+</td>
+<td style="text-align:right;">
+0.0222222
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="angriest-songs" class="section level2">
+<h2>angriest songs</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+album
+</th>
+<th style="text-align:left;">
+song
+</th>
+<th style="text-align:right;">
+n
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Room for Improvement
+</td>
+<td style="text-align:left;">
+Drake’s Voice Mail Box #2
+</td>
+<td style="text-align:right;">
+0.0416667
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comeback Season
+</td>
+<td style="text-align:left;">
+The Last Hope
+</td>
+<td style="text-align:right;">
+0.0332410
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Room for Improvement
+</td>
+<td style="text-align:left;">
+A Scorpio’s Mind
+</td>
+<td style="text-align:right;">
+0.0268657
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Take Care
+</td>
+<td style="text-align:left;">
+Shot for Me
+</td>
+<td style="text-align:right;">
+0.0266344
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Take Care
+</td>
+<td style="text-align:left;">
+Buried Alive
+</td>
+<td style="text-align:right;">
+0.0259740
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comeback Season
+</td>
+<td style="text-align:left;">
+Intro
+</td>
+<td style="text-align:right;">
+0.0250000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comeback Season
+</td>
+<td style="text-align:left;">
+Going in for Life
+</td>
+<td style="text-align:right;">
+0.0227273
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Room for Improvement
+</td>
+<td style="text-align:left;">
+Try Harder
+</td>
+<td style="text-align:right;">
+0.0223881
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comeback Season
+</td>
+<td style="text-align:left;">
+Share
+</td>
+<td style="text-align:right;">
+0.0222222
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+So Far Gone
+</td>
+<td style="text-align:left;">
+Brand New
+</td>
+<td style="text-align:right;">
+0.0219780
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Scorpion
+</td>
+<td style="text-align:left;">
+8 Out Of 10
+</td>
+<td style="text-align:right;">
+0.0214797
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Scorpion
+</td>
+<td style="text-align:left;">
+I’m Upset
+</td>
+<td style="text-align:right;">
+0.0214797
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+So Far Gone
+</td>
+<td style="text-align:left;">
+Ignant Shit
+</td>
+<td style="text-align:right;">
+0.0214031
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Room for Improvement
+</td>
+<td style="text-align:left;">
+Bad Meaning Good
+</td>
+<td style="text-align:right;">
+0.0212264
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+IYRTITL
+</td>
+<td style="text-align:left;">
+Know Yourself
+</td>
+<td style="text-align:right;">
+0.0207972
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="conclusion" class="section level1">
+<h1>conclusion</h1>
+<p>As a brief conclusion, given that this is mostly exploratory and a direct question was not asked, one thing to note is how Drake’s older music tends to have more emotion/sentiment than his newer music. This could bring us to ask the difference between “Old Drake” vs. “New Drake.”</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
