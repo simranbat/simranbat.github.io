@@ -1,11 +1,10 @@
 ---
 name: "my-website"
 navbar:
-  title: "Simran's Website"
+  title: "Simran Batra"
   left:
     - text: "Music Analysis"
       href: index.html
     - text: "About"
       href: about.html
 ---
-
