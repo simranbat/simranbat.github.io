@@ -7,9 +7,4 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
-output_dir: "."
-output:
-  html_document:
-    theme: yeti
-    highlight: textmate
 ---
