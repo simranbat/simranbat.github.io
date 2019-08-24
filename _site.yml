@@ -3,7 +3,7 @@ name: "my-website"
 navbar:
   title: "Simran Batra"
   left:
-    - text: "Music Analysis"
+    - text: "Analysis"
       href: index.html
     - text: "About"
       href: about.html

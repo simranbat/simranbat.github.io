@@ -6,7 +6,8 @@ output:
     toc_float: false
 ---
 
-I'm a fourth year studying Math and Government at the University of Virginia.  After learning sentiment analysis in a political analysis class, I had a random thought about how this could apply to music, and thus instigated my whole exploration of music analysis.  Because there is no data science undergraduate program at UVA, about half of what I know is self-taught, and I use music-related datasets in this learning exploration because they're interesting to me and always lead to some surprising conclusions.  Aside from music analysis, I enjoy working with political datasets to supplement qualitative political analysis.  I'm specifically interested in the Asian American community's interaction with politics, especially since almost no datasets include ethnicity, so the diversity of the Asian American community is largely unrecognized.
+I'm a recent graduate from the University of Virginia where I studied Math, Government, and Asian American Studies.  To teach myself new things, I often use music related datasets, and hence this website as a culmination of my projects. Aside from music analysis, I enjoy working with political datasets to supplement qualitative political analysis.  I'm specifically interested in the Asian American community's interaction with politics.  
 
+Some of my favorite artists are Tierra Whack, Saba, Kali Uchis, and Amine.  Aside from discovering new music, I spend my free time reading books and watching horror movies.
 
-So far, some of my favorite albums of 2018 are *Whack World* by Tierra Whack, *Isolation* by Kali Uchis, *CARE FOR ME* by Saba, *Tha Carter V* by Lil Wayne, and *Harlan & Alondra* by Buddy.  Aside from discovering new music, I spend my free time watching horror movies and makeup tutorials. 
+<iframe src="https://open.spotify.com/embed/playlist/6SYoxIfAXtR5yyiEYggpNv" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
