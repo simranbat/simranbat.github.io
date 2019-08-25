@@ -9,5 +9,3 @@ output:
 I'm a recent graduate from the University of Virginia where I studied Math, Government, and Asian American Studies.  To teach myself new things, I often use music related datasets, and hence this website as a culmination of my projects. Aside from music analysis, I enjoy working with political datasets to supplement qualitative political analysis.  I'm specifically interested in the Asian American community's interaction with politics.  
 
 Some of my favorite artists are Tierra Whack, Saba, Kali Uchis, and Amine.  Aside from discovering new music, I spend my free time reading books and watching horror movies.
-
-<iframe src="https://open.spotify.com/embed/playlist/6SYoxIfAXtR5yyiEYggpNv" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>

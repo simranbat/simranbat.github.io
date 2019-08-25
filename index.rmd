@@ -71,6 +71,13 @@ The culminating products were 2 playlists automatically generated in the user’
 
 You can find my project [here](https://github.com/simranbat/saddest-happiest-spotify-songs).
 
+Here's my happy playlist: 
+
+<iframe src="https://open.spotify.com/embed/playlist/6SYoxIfAXtR5yyiEYggpNv" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+And my sad playlist:
+
+<iframe src="https://open.spotify.com/embed/playlist/5HjFOfLWsFzmvFFYVmmfTt" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 ## Hip-Hop v. Obama
 
