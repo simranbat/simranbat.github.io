@@ -1,0 +1,107 @@
+---
+title: "Simran's Projects"
+output:
+  html_document:
+    toc: false
+    toc_depth: 2
+    toc_float: false
+
+---
+
+# Projects {.tabset}
+
+## Pitchfork Reviews
+
+### Genre Distinctions and Biases of Pitchfork Reviews
+
+#### Inspiration
+
+There’s a lot of controversy around music reviews because of claims that they are biased, way too subjective, and often times elitist.  With my own experience reading music reviews, I’ve noticed several trends that are worthy of exploration in order to get a cultural understanding of the music industry.  This analysis explores the text of [Pitchfork](https://Pitchfork.com/) reviews as an attempt to reveal some of the (potential spaces of) biases, or lack thereof.  At the same time, this analysis also aims to identify some of the distinctions among the genres, as this is a much-studied topic that has become increasingly possible with the integration of technology and music.  
+
+#### Methodology
+I scraped 75,000+ reviews from Pitchfork using the package BeautifulSoup in Python.  After transforming this data into OHCO format, I performed a Principle Component Analysis (PCA) of adjectives in the reviews (also in Python and JupyterLabs), and created a 3D visualization in Plotly that pinpointed the words associated with each component.  In addition, I did a Naïve Bayes classifier of “good” vs. “bad” reviews and outputted the generated sentiment lexicons. 
+
+#### Conclusion
+
+Some conclusions drawn from the PCA are that words involving lyrics are more associated with Rap whereas words involving audio qualities of the music are more associated with Rock and Metal.  In addition, the word “he’s” is most associated with Rap, indicating that the individual male is most prominent in this genre vs. other genres.  Alternatively, the word “they’ve” was most associated with Metal, meaning that genre is highly associated with musical groups as opposed to soloists.  The classification revealed an interesting result that there were a few genres in the words most associated with good or bad reviews.  Rap and Pop were highly associated with bad reviews, revealing an inherent bias, whereas Jazz was most associated with good reviews.   
+
+You can find my work [here](https://github.com/simranbat/pitchfork). 
+
+
+## "Old Drake" vs. "New Drake"
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### A Data Science Approach to "Old Drake" vs. "New Drake"
+
+#### Inspiration
+
+Rapper/singer Aubrey Graham, who goes by the stage name Drake, is one of the most charted, streamed, and decorated artists in recent history. Having been in the music industry for well over ten years, Drake is subject to much critique over the transformation of his music throughout the decade, and this debate has coined the terms “Old Drake” and “New Drake.” A general consensus is that now he lacks the same lyricism ability that he used to possess in his older work. This analysis aims to answer the question: is there a difference between “Old Drake” vs. “New Drake,” and if so, what are these differences? Through data, can we validate the claims that Drake’s new music lacks lyrical quality and follows more traditionally “mainstream” patterns of music?
+
+#### Methodology
+
+I tackle the question of Old Drake vs. New Drake through data visualization. In terms of lyrics, I’ve acquired all of the lyrics to Drake’s major projects from 2006 to present via [Genius](https://genius.com/). I used the tidytext library in R to analyze the density of the lyrics, and I used the NRC Emotion Lexicon in R to get data on the sentiment/sentimental substance of Drake’s lyrics. In tandem with this, I used the “spotipy” package in Python to get audio data on Drake’s songs. For some of this analysis, I used logistic machine learning in Python to judge Drake’s sound. I merged audio and lyrical data into one dataset, and have used the plotly and ggplot2 libraries in R to create visuals.  The plots reveal insights that are not intuitive just by listening to his music, and some observations are contradictory to the mainstream consensus.
+
+#### Conclusion
+
+The plots reveal that Drake’s lyricism has changed, but instead of having the mainstream quality of being repetitive, it has just become less emotional. In addition, his music has become more radio friendly with the increasing levels of danceability, but he is not becoming more ‘pop’ as people suggest. 
+**I had the opportunity to present this research at the University of Virginia’s Data Science conference, Datapalooza, in November 2018.  I was chosen as one of four presenters in the data visualization category among a competitive group of applicants that included professors, industry professionals, and graduate/undergraduate students.  In March 2019, I had the additional opportunity to present this project at the Echols Scholars Symposium at UVA, where I took home an award for “Most Creative” project.**  
+
+You can view the slides for the presentation [here](https://plot.ly/~simranbat/14/_2018-datapalooza-batra/#/).  
+   
+
+
+## Mood Playlist Generator
+
+### Spotify Mood Playlist Generator 
+
+#### Inspiration
+
+Spotify makes playlists for mood, but I’ve never been inclined to listen to those playlists because they don’t usually align with my genre preferences/taste.  I decided to make a machine learning model that, based on your mood, outputs a playlist from your own library. 
+
+#### Methodology 
+
+Because this was my first machine learning model, I decided to make it simple and stick with logistic regression.   I used Spotify’s API to get samples of “happy” and “sad” playlists and the corresponding audio details for the songs in the playlists.  I used that as a training dataset and the songs from the user’s library as a testing dataset.  Using sklearn in Python, I used the machine learning algorithm to predict how happy a song would be from 0 to 1 based on the training data.  
+
+#### Conclusion
+
+The culminating products were 2 playlists automatically generated in the user’s Spotify library of their top 20 happy songs and top 20 sad songs. 
+
+You can find my project [here](https://github.com/simranbat/saddest-happiest-spotify-songs).
+
+Here's my happy playlist: 
+
+<iframe src="https://open.spotify.com/embed/playlist/6SYoxIfAXtR5yyiEYggpNv" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+And my sad playlist:
+
+<iframe src="https://open.spotify.com/embed/playlist/5HjFOfLWsFzmvFFYVmmfTt" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+## Hip-Hop v. Obama
+
+### A Comparative Content Analysis of Obama Speeches and Hip-Hop Lyrics
+
+#### Inspiration
+
+I’ve always been curious about the intersection between hip-hop and politics given my background in government and affinity towards hip-hop.  Most of what I’ve read about the intersection is that a) hip hop is inherently political, and b) hip-hop can be a tool for political mobilization.  However, I’ve yet to find research that compares the actual content of hip-hop and politics, which in turn served as inspiration for this project.  
+
+#### Methodology
+
+I used my qualitative skills as a Government major along with my data science toolkit for this project.  I wrote a code in Python that created a [dataset](https://github.com/simranbat/obama) of all 17,000+ of the Obama documents including speeches, statements, executive orders, etc., from 2004 to 2017 from UC Santa Barbara’s The Presidency Project.  I performed an LDA topic model in Python to generate a list of associated words, and using my background, classified these groupings into topics.  I compared these to topic models of hip-hop lyrics.  I also used R to look at a tokenized version of the Obama speech dataset along with a dataset of hip-hop lyrics to find specific references of each other and topics.
+
+#### Conclusion
+
+Obama and hip-hop discussed very dissimilar topics.  Obama spoke about largely universal topics like the environment and security whereas the politics in hip-hop was centered around black politics like police brutality and mass incarceration.  Obama mentioned hip-hop periodically, close to his election cycles.  In contrast, the mention of Obama and the presidency declined from 2007 to 2017 and the specific references in the lyrics had the sentiment of disillusionment and disappointment.  
+
+
+## Other Projects
+
+### Other Projects
+
+* I made a model predicting the original release dates of songs from Drake’s Care Package with an average 1 year margin of error. 
+* I made a [Tableau dashboard](https://public.tableau.com/profile/simran.batra1879#!/vizhome/XXLFreshmanClass/Dashboard2) looking at the trends of the XXL Freshman classes. 
+* Using geospatial data as support, I wrote a paper on the racial dynamics of the Eden Center in Falls Church, Virginia.  
+* I made a [Shiny web application](https://simranbat.shinyapps.io/pitchfork/) that gives out album recommendations based on user inputted genres.  
+* I created this website using R Markdown.
